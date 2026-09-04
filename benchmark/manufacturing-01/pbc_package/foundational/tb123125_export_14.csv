@@ -1,0 +1,109 @@
+Account,Name,Beginning Balance,Debit,Credit,Ending Balance
+1000,Cash - operating,700000,5738699.4,3992571.97,2446127.43
+1002,Money market reserve,280000,160533.36,152133.36,288400
+1003,Cash - resident trust,0,0,0,0
+1005,Merchant card receivable,0,0,0,0
+1006,Cash on hand,0,0,0,0
+1010,Accounts receivable - trade,398162.02,3458208.96,3334604.09,521766.89
+1011,Allowance for credit losses,-19554.34,0,6070.43,-25624.77
+1014,Inventory in transit,0,18995.82,0,18995.82
+1015,Inventory,0,0,0,0
+1016,Inventory - raw materials,10057.59,1067054.6,598377.51,478734.68
+1017,Inventory - work in process,7825.8,867763.34,486456.6,389132.54
+1018,Inventory - finished goods,20441.46,2330276.05,1307474.84,1043242.67
+1019,Reserve for excess and obsolete inventory,0,0,0,0
+1030,Prepaid expenses,17503.52,27389.76,27735.48,17157.8
+1050,Property and equipment,4793423,13650.86,0,4807073.86
+1051,Accumulated depreciation,-3968917.76,0,550352.7,-4519270.46
+1060,Escrow deposits - lender,0,0,0,0
+1080,Deferred financing costs,52500,0,0,52500
+1081,Accumulated amortization,0,0,2625,-2625
+2000,Accounts payable,-50718.85,2996297.09,4491534.11,-1545955.87
+2002,Resident funds held in trust,0,0,0,0
+2020,Accrued expenses,-3698.59,3698.59,34623.33,-34623.33
+2021,Accrued payroll,-3440.22,3440.22,3520.11,-3520.11
+2025,Payroll withholdings payable,0,140958.13,140958.13,0
+2030,Tenant impounds payable,0,0,0,0
+2037,Sales tax payable,0,0,0,0
+2038,Employee tips payable,0,0,0,0
+2039,Gift cards outstanding,0,0,0,0
+2041,Notes payable,-3500000,53568.09,0,-3446431.91
+3010,Paid-in capital,0,0,2250000,-2250000
+3020,Dividends paid,0,0,0,0
+3030,Retained earnings,1266416.37,0,0,1266416.37
+4010,Product sales,0,10070.11,3458208.96,-3448138.85
+4030,Net investment income,0,0,8400,-8400
+4035,Escrow interest income,0,0,0,0
+6001,Cash over and short,0,0,0,0
+6002,Management fees,0,57564.62,0,57564.62
+6003,Kitchen and breakroom supplies,0,450,0,450
+6005,Cost of goods sold,0,3922.62,3922.62,0
+6006,Cost of goods sold - product,0,957377.84,0,957377.84
+6008,Employee benefits,0,69109.67,0,69109.67
+6009,Packaging and shipping supplies,0,419271.59,0,419271.59
+6010,Warehouse handling,0,356960.7,0,356960.7
+6011,Purchasing costs,0,288303.24,0,288303.24
+6012,Freight in,0,198023.95,0,198023.95
+6013,Inventory adjustments,0,172371.63,0,172371.63
+6014,Professional fees,0,0,0,0
+6015,Legal fees,0,30121.09,2510.04,27611.05
+6016,Consulting fees,0,0,0,0
+6021,Repairs and maintenance,0,0,0,0
+6022,Repairs and maintenance - equipment,0,9336.05,0,9336.05
+6023,Maintenance contracts,0,0,0,0
+6024,Utilities,0,75647.06,0,75647.06
+6026,Purchases,0,0,0,0
+6030,General and administrative,0,10483.53,1224.01,9259.52
+6031,Outside services,0,3186.88,0,3186.88
+6032,Wages and salaries,0,0,0,0
+6033,Wages - direct labor,0,134423.94,3440.22,130983.72
+6034,Wages - supervision,0,68179.26,0,68179.26
+6035,Overtime premium,0,32934.67,0,32934.67
+6036,Officers salaries,0,38470.51,0,38470.51
+6037,Employer payroll taxes,0,1224.01,1224.01,0
+6038,Payroll taxes - FICA,0,21624.76,0,21624.76
+6039,Plan room fees,0,1750,0,1750
+6040,Bid and proposal expense,0,700,0,700
+6041,Bad debt expense,0,0,0,0
+6042,Snow removal,0,650,0,650
+6043,Vehicle registration and fees,0,0,0,0
+6044,Vehicle fuel,0,0,0,0
+6045,Laundry and cleaning,0,0,0,0
+6046,Bonding expense,0,7600,0,7600
+6047,Data processing,0,0,0,0
+6048,Professional development,0,0,0,0
+6049,Janitorial services,0,0,0,0
+6050,Advertising,0,900,0,900
+6051,Technical publications,0,800,0,800
+6052,Retirement plan expense,0,550,0,550
+6053,Drug testing and screening,0,0,0,0
+6054,Blueprints and plans,0,500,0,500
+6055,Insurance expense,0,18475.96,0,18475.96
+6056,Overhead labor allocation,0,0,0,0
+6057,Life and disability insurance,0,0,0,0
+6058,Uniforms,0,0,0,0
+6059,Permit fees,0,0,0,0
+6060,Rent - equipment yard,0,0,0,0
+6061,Meetings and events,0,0,0,0
+6062,Field supplies,0,0,0,0
+6063,Employee benefits,0,0,0,0
+6064,Miscellaneous expense,0,0,0,0
+6067,Postage and delivery,0,0,0,0
+6068,Late fees and finance charges,0,0,0,0
+6069,Subsistence and per diem,0,0,0,0
+6070,Bank fees,0,0,0,0
+6071,Merchant processing fees and chargebacks,0,0,0,0
+6072,Provision for credit losses,0,6070.43,0,6070.43
+6073,Insurance,0,0,0,0
+6074,Insurance - general liability,0,10222.44,0,10222.44
+6075,Insurance - vehicles,0,0,0,0
+6076,Property taxes,0,0,0,0
+6077,Taxes and licenses,0,52290.9,0,52290.9
+6078,Interest expense,0,376920.15,12032.06,364888.09
+6081,Depreciation expense,0,550352.7,0,550352.7
+6090,Amortization expense,0,6547.62,3922.62,2625
+,,,,,
+Total debits,20873922.2,,,,
+Total credits,20873922.2,,,,
+,,,,,
+"Wednesday, Jan 14, 2026 - Accrual Basis",,,,,
