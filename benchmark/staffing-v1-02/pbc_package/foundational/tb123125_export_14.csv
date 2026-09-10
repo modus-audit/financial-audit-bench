@@ -1,0 +1,28 @@
+Account,Name,Debit,Credit
+1000,Cash - operating,2289324.29,0
+1010,Accounts receivable - trade,90192,0
+1011,Allowance for credit losses,0,23589.25
+1030,Prepaid expenses,10498.63,0
+1050,Property and equipment,169160,0
+1051,Accumulated depreciation,0,109116.01
+2000,Accounts payable,0,0
+2021,Accrued payroll,0,40025.99
+2025,Payroll withholdings payable,0,0
+2041,Notes payable,0,774813.07
+3030,Members' equity,0,704959.97
+4000,Other income,0,0
+4010,Service revenue,0,4154104.75
+6005,Cost of goods sold,2904850.21,0
+6030,General and administrative,28010.96,0
+6032,Wages and salaries,254614.03,0
+6034,Employer payroll taxes,17779.48,0
+6045,Provision for credit losses,0,69506.97
+6055,Insurance expense,32268.49,0
+6070,Interest expense,47324.66,0
+6080,Depreciation expense,32093.26,0
+,,,
+Total debits,5876116.01,,
+Total credits,5876116.01,,
+,,,
+"Wednesday, Jan 14, 2026 - Accrual Basis",,,
+,,,

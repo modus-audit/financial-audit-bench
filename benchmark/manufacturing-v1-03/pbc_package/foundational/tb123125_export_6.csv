@@ -1,0 +1,42 @@
+Account,Name,Beginning Balance,Debit,Credit,Ending Balance
+1000,Cash - operating,460321.38,3853681.91,2881372.1,1432631.19
+1010,Accounts receivable - trade,373996.95,4309991.9,3868870.71,815118.14
+1011,Allowance for credit losses,-34342.32,0,30312.25,-64654.57
+1014,Inventory in transit,0,5040.36,0,5040.36
+1015,Inventory,0,0,0,0
+1016,Inventory - raw materials,18992.29,986099.57,963731.36,41360.5
+1017,Inventory - work in process,30706.1,1097231.36,1066274.29,61663.17
+1018,Inventory - finished goods,5250.66,1092174.29,1060713.97,36710.98
+1019,Reserve for excess and obsolete inventory,0,0,0,0
+1030,Prepaid expenses,23956.16,42000,54126.03,11830.13
+1050,Property and equipment,1173090,0,0,1173090
+1051,Accumulated depreciation,-482174.46,0,191400.81,-673575.27
+2000,Accounts payable,0,988462.64,1028099.57,-39636.93
+2020,Accrued expenses,0,0,5040.36,-5040.36
+2025,Payroll withholdings payable,0,136235.46,141506.56,-5271.1
+2037,Sales tax payable,0,750.28,214182.11,-213431.83
+2041,Notes payable,-1131826.06,36043.89,0,-1095782.17
+3030,Retained earnings,-437970.7,0,0,-437970.7
+4000,Other income,0,0,0,0
+4010,Product sales,0,14438.52,4095809.79,-4081371.27
+6005,Cost of goods sold,0,0,0,0
+6006,Materials and purchased components,0,555365.54,98900,456465.54
+6009,Outside processing and conversion,0,207486.07,31200,176286.07
+6010,Manufacturing overhead,0,297862.36,29300,268562.36
+6030,General and administrative,0,23353.43,0,23353.43
+6032,Wages and salaries,0,0,0,0
+6033,Wages - direct labor,0,895754.73,0,895754.73
+6034,Officers salaries,0,413425.26,0,413425.26
+6035,Bonuses,0,344521.05,0,344521.05
+6036,Employer payroll taxes,0,0,0,0
+6037,Payroll taxes - FICA,0,141506.56,0,141506.56
+6055,Insurance expense,0,30772.6,0,30772.6
+6072,Provision for credit losses,0,30312.25,0,30312.25
+6078,Interest expense,0,66929.07,0,66929.07
+6081,Depreciation expense,0,191400.81,0,191400.81
+,,,,,
+Total debits,15760839.91,,,,
+Total credits,15760839.91,,,,
+,,,,,
+"Wednesday, Jan 14, 2026 - Accrual Basis",,,,,
+,,,,,
