@@ -1,0 +1,24 @@
+{
+  "resource_id": "authored.receivables.staffing-billing.v1",
+  "values": {
+        "bill_rates": [
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100,
+          110,
+          120,
+          130,
+          140,
+          150
+        ],
+        "regular_hours": 40,
+        "active_customer_count": 25,
+        "invoice_days_after_latest_week": 6,
+        "authorization_lead_days": 2,
+        "customer_approval_days": 3
+  }
+}

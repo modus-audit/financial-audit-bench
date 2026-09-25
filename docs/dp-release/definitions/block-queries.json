@@ -1,0 +1,72 @@
+{
+  "schema": "dp_priors_block_queries",
+  "targets": {
+    "block.account_range_map": {
+      "categorical_distributions": {
+        "nonstandard_split_mix": {
+          "categories": [
+            "true",
+            "false",
+            "other"
+          ],
+          "field": "is_nonstandard_split",
+          "kind": "closed_categorical"
+        }
+      },
+      "counts": {
+        "unit_count": {
+          "cap": 20
+        }
+      }
+    },
+    "block.pair_tie_class_matrix": {
+      "categorical_distributions": {
+        "tie_class_mix": {
+          "categories": [
+            "exact",
+            "rounding",
+            "reconcilable",
+            "partial_overlap",
+            "no_overlap",
+            "other"
+          ],
+          "field": "tie_class",
+          "kind": "closed_categorical"
+        }
+      },
+      "counts": {
+        "unit_count": {
+          "cap": 20
+        }
+      }
+    },
+    "block.year_end_true_up_cluster": {
+      "categorical_distributions": {
+        "creation_lag_mix": {
+          "edges": [
+            4,
+            8,
+            16,
+            31,
+            61
+          ],
+          "field": "creation_lag_days",
+          "kind": "bucketized_numeric",
+          "labels": [
+            "0_3",
+            "4_7",
+            "8_15",
+            "16_30",
+            "31_60",
+            "61_plus"
+          ]
+        }
+      },
+      "counts": {
+        "unit_count": {
+          "cap": 20
+        }
+      }
+    }
+  }
+}

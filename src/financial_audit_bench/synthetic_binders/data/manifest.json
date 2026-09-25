@@ -1,0 +1,54 @@
+{
+  "resources": [
+    {
+      "resource_id": "authored.global.operating-policy.v1",
+      "kind": "authored_policy",
+      "path": "authored/global/operating-policy.v1.json"
+    },
+    {
+      "resource_id": "authored.identities.document-identities.v1",
+      "kind": "authored_policy",
+      "path": "authored/global/identities/document-identities.v1.json"
+    },
+    {
+      "resource_id": "authored.business-types.workforce.v1",
+      "kind": "authored_policy",
+      "path": "authored/business-types/workforce.v1.json"
+    },
+    {
+      "resource_id": "authored.fixed-assets.opening-register.v1",
+      "kind": "authored_policy",
+      "path": "authored/domains/fixed-assets/opening-register.v1.json"
+    },
+    {
+      "resource_id": "authored.inventory.rules.v1",
+      "kind": "authored_policy",
+      "path": "authored/domains/inventory/rules.v1.json"
+    },
+    {
+      "resource_id": "authored.receivables.trade-ar.v1",
+      "kind": "authored_policy",
+      "path": "authored/domains/receivables/trade-ar.v1.json"
+    },
+    {
+      "resource_id": "authored.receivables.staffing-billing.v1",
+      "kind": "authored_policy",
+      "path": "authored/domains/receivables/staffing-billing.v1.json"
+    },
+    {
+      "resource_id": "authored.customers.master-generation.v1",
+      "kind": "authored_policy",
+      "path": "authored/domains/customers/master-generation.v1.json"
+    },
+    {
+      "resource_id": "authored.chart-of-accounts.base-rows.v1",
+      "kind": "authored_policy",
+      "path": "authored/domains/chart-of-accounts/base-rows.v1.json"
+    },
+    {
+      "resource_id": "registry.pbc.requests.v1",
+      "kind": "registry",
+      "path": "registries/pbc/requests.v1.json"
+    }
+  ]
+}

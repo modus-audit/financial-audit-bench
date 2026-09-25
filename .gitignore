@@ -1,0 +1,17 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+~$*.xlsx
+
+/generated_binders/
+/artifacts/
+/jobs/
+archive/
+
+/benchmark_tasks/
+/experiments/
+/tmp/

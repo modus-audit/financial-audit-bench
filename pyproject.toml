@@ -1,0 +1,47 @@
+[project]
+name = "financial-audit-bench"
+version = "1.0.0"
+description = "Financial statement audit tasks and synthetic binder generation"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Modus Audit Inc." }]
+requires-python = ">=3.12, <3.14"
+dependencies = [
+    "harbor==0.22.0",
+    "huggingface-hub>=0.34,<2",
+    "litellm>=1.100.0",
+    "openai>=2.54.0",
+    "openpyxl>=3.1.5",
+    "python-dotenv>=1.0.0",
+]
+
+[project.scripts]
+fab = "financial_audit_bench.cli:main"
+
+[project.optional-dependencies]
+legacy = [
+    "fpdf2>=2.8.8",
+    "jsonschema>=4.26.0",
+    "pypdf>=6.18.1",
+    "python-docx>=1.2.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.12,<1",
+]
+[tool.ruff.lint]
+select = ["E9", "F"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.uv.build-backend]
+module-name = "financial_audit_bench"
+
+[build-system]
+requires = ["uv_build>=0.11.16,<0.12.0"]
+build-backend = "uv_build"

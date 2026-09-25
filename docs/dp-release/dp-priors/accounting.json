@@ -1,0 +1,262 @@
+{
+ "delta": 1e-05,
+ "entries": [
+  {
+   "label": "block.account_range_map::block_comp:nonstandard_split_mix",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.002746658533314893,
+   "sensitivity": 60.0,
+   "sigma": 809.531807
+  },
+  {
+   "label": "block.account_range_map::block_comp:unit_count",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.0018311056888765953,
+   "sensitivity": 1.0,
+   "sigma": 16.524499
+  },
+  {
+   "label": "block.pair_tie_class_matrix::block_comp:tie_class_mix",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.002746658533314893,
+   "sensitivity": 60.0,
+   "sigma": 809.531807
+  },
+  {
+   "label": "block.pair_tie_class_matrix::block_comp:unit_count",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.0018311056888765953,
+   "sensitivity": 1.0,
+   "sigma": 16.524499
+  },
+  {
+   "label": "block.vendor_bill_cadence_chains::block_comp:cadence_bill_count_joint",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.007324422755506381,
+   "sensitivity": 60.0,
+   "sigma": 495.734965
+  },
+  {
+   "label": "block.year_end_true_up_cluster::block_comp:creation_lag_mix",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.002746658533314893,
+   "sensitivity": 60.0,
+   "sigma": 809.531807
+  },
+  {
+   "label": "block.year_end_true_up_cluster::block_comp:unit_count",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.0018311056888765953,
+   "sensitivity": 1.0,
+   "sigma": 16.524499
+  },
+  {
+   "label": "block:aje_book:entry_count",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.008674160596254995,
+   "sensitivity": 1.0,
+   "sigma": 7.592264
+  },
+  {
+   "label": "block:aje_book:kind_mix",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.014456934327091657,
+   "sensitivity": 60.0,
+   "sigma": 352.856522
+  },
+  {
+   "label": "block:aje_book:magnitude_mix",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.014456934327091657,
+   "sensitivity": 60.0,
+   "sigma": 352.856522
+  },
+  {
+   "label": "count.gl_annual_line_volume_class::scalar_hist",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.007120966567853426,
+   "sensitivity": 1.0,
+   "sigma": 8.379451
+  },
+  {
+   "label": "count.vendor_fanout::scalar_hist",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.007120966567853426,
+   "sensitivity": 1.0,
+   "sigma": 8.379451
+  },
+  {
+   "label": "hist.day_of_month_posting::scalar_hist",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.007120966567853426,
+   "sensitivity": 1.0,
+   "sigma": 8.379451
+  },
+  {
+   "label": "hist.lines_per_entry::scalar_hist",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.007120966567853426,
+   "sensitivity": 1.0,
+   "sigma": 8.379451
+  },
+  {
+   "label": "marginal:ratio.accounts_receivable_to_revenue",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.006071912417378496,
+   "sensitivity": 1.0,
+   "sigma": 9.074491
+  },
+  {
+   "label": "marginal:ratio.inventory_to_cogs",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.006071912417378496,
+   "sensitivity": 1.0,
+   "sigma": 9.074491
+  },
+  {
+   "label": "marginal:ratio.inventory_to_revenue",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.006071912417378496,
+   "sensitivity": 1.0,
+   "sigma": 9.074491
+  },
+  {
+   "label": "marginal:ratio.outstanding_checks_to_bank_balance",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.006071912417378496,
+   "sensitivity": 1.0,
+   "sigma": 9.074491
+  },
+  {
+   "label": "marginal:ratio.payroll_tax_to_wages",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.006071912417378496,
+   "sensitivity": 1.0,
+   "sigma": 9.074491
+  },
+  {
+   "label": "marginal:ratio.payroll_to_revenue",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.006071912417378496,
+   "sensitivity": 1.0,
+   "sigma": 9.074491
+  },
+  {
+   "epsilon": 0.13171302590294548,
+   "label": "quantiles:ratio.accounts_receivable_to_revenue",
+   "mechanism": "exponential",
+   "rho": 0.0021685401490637484,
+   "sensitivity": 2.0
+  },
+  {
+   "epsilon": 0.13171302590294548,
+   "label": "quantiles:ratio.inventory_to_cogs",
+   "mechanism": "exponential",
+   "rho": 0.0021685401490637484,
+   "sensitivity": 2.0
+  },
+  {
+   "epsilon": 0.13171302590294548,
+   "label": "quantiles:ratio.inventory_to_revenue",
+   "mechanism": "exponential",
+   "rho": 0.0021685401490637484,
+   "sensitivity": 2.0
+  },
+  {
+   "epsilon": 0.13171302590294548,
+   "label": "quantiles:ratio.outstanding_checks_to_bank_balance",
+   "mechanism": "exponential",
+   "rho": 0.0021685401490637484,
+   "sensitivity": 2.0
+  },
+  {
+   "epsilon": 0.13171302590294548,
+   "label": "quantiles:ratio.payroll_tax_to_wages",
+   "mechanism": "exponential",
+   "rho": 0.0021685401490637484,
+   "sensitivity": 2.0
+  },
+  {
+   "epsilon": 0.13171302590294548,
+   "label": "quantiles:ratio.payroll_to_revenue",
+   "mechanism": "exponential",
+   "rho": 0.0021685401490637484,
+   "sensitivity": 2.0
+  },
+  {
+   "label": "ratio.manual_entry_share::scalar_hist",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.007120966567853426,
+   "sensitivity": 1.0,
+   "sigma": 8.379451
+  },
+  {
+   "label": "ratio.out_of_period_line_share::scalar_hist",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.007120966567853426,
+   "sensitivity": 1.0,
+   "sigma": 8.379451
+  },
+  {
+   "label": "selection.account_code_format::closed_cat",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.015259214073971628,
+   "sensitivity": 1.0,
+   "sigma": 5.724255
+  },
+  {
+   "label": "selection.consolidation_presentation::closed_cat",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.015259214073971628,
+   "sensitivity": 1.0,
+   "sigma": 5.724255
+  },
+  {
+   "label": "selection.formula_presence::scalar_hist",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.007120966567853426,
+   "sensitivity": 1.0,
+   "sigma": 8.379451
+  },
+  {
+   "label": "selection.grouping_structure::closed_cat",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.015259214073971628,
+   "sensitivity": 1.0,
+   "sigma": 5.724255
+  },
+  {
+   "label": "selection.opening_convention_per_export::closed_cat",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.015259214073971628,
+   "sensitivity": 1.0,
+   "sigma": 5.724255
+  },
+  {
+   "label": "selection.pay_frequency::vocab",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.0081382475061182,
+   "sensitivity": 1.0,
+   "sigma": 7.838259
+  },
+  {
+   "label": "selection.tb_dialect::closed_cat",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.015259214073971628,
+   "sensitivity": 1.0,
+   "sigma": 5.724255
+  },
+  {
+   "label": "vocab.memo_template_library::vocab",
+   "mechanism": "discrete_gaussian",
+   "rho": 0.0081382475061182,
+   "sensitivity": 1.0,
+   "sigma": 7.838259
+  }
+ ],
+ "epsilon_at_delta": 3.647022199528197,
+ "ledger_entry_count": 36,
+ "release_label": "dp-priors",
+ "rho": 0.25050779142824114,
+ "schema": "dp_priors_accounting"
+}

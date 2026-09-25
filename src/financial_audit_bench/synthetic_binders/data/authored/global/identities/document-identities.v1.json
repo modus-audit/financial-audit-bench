@@ -1,0 +1,108 @@
+{
+  "resource_id": "authored.identities.document-identities.v1",
+  "values": {
+    "identity_version": "identity-v2-2026-09",
+    "bank_names": [
+      "Vexington Bank", "Quordale Trust", "Zaxbury Financial",
+      "Vovville Depository", "Quilton Institution", "Zarvale Bank",
+      "Veltford Trust", "Quixham Financial", "Zimvale Depository",
+      "Voxmere Institution", "Quothill Bank", "Zenvale Trust",
+      "Vaxview Financial", "Quozberg Depository", "Zixmoor Institution",
+      "Vorquine Bank"
+    ],
+    "bank_personas": [
+      {
+        "address": "7712 Corporate Drive, New York, NY 10004",
+        "phone": "+1 (212) 555-0147",
+        "product": "Business Checking",
+        "mask": "full"
+      },
+      {
+        "address": "2978 Enterprise Boulevard, Long Island City, NY 11101",
+        "phone": "+1 (415) 555-0892",
+        "product": "Analysis Checking",
+        "mask": "x6"
+      },
+      {
+        "address": "6789 Commerce Lane, Buffalo, NY 14202",
+        "phone": "+1 (312) 555-0456",
+        "product": "Commercial Checking",
+        "mask": "full"
+      }
+    ],
+    "non_routable_aba_prefix": "99",
+    "payroll_masked_account_number": "****4410",
+    "customer_confirmation_email_template": "confirmation@{customer_id}.com",
+    "vendor_name_template": "Synthetic {expense_class} Vendor {ordinal:03d}",
+    "audit_firm": {
+      "name": "Hartwell & Vance, CPAs",
+      "address": "412 Market Street, Suite 900, Philadelphia, PA 19106",
+      "fax": "+1 (617) 555-0723"
+    },
+    "respondent_addresses": [
+      ["789 Commerce Drive", "Atlanta, GA 30303", "+1 (713) 555-0189"],
+      ["2847 Industrial Boulevard", "Cleveland, OH 44114", "+1 (404) 555-0834"],
+      ["556 Business Park Road", "Austin, TX 78701", "+1 (206) 555-0562"],
+      ["1123 Corporate Plaza", "Denver, CO 80202", "+1 (303) 555-0945"],
+      ["3344 Commercial Avenue", "Miami, FL 33128", "+1 (480) 555-0378"],
+      ["667 Enterprise Way", "Seattle, WA 98101", "+1 (214) 555-0691"]
+    ],
+    "remit_localities": [
+      "Philadelphia, PA 19106", "Atlanta, GA 30303",
+      "Cleveland, OH 44114", "Austin, TX 78701", "Denver, CO 80202",
+      "Miami, FL 33128", "Seattle, WA 98101", "Dallas, TX 75201",
+      "Boston, MA 02108"
+    ],
+    "warehouse_addresses": [
+      "2500 Industrial Parkway, Memphis, TN 38118",
+      "3400 Logistics Drive, Long Beach, CA 90802",
+      "4200 Distribution Road, Louisville, KY 40202",
+      "5100 Freight Lane, Baltimore, MD 21202",
+      "6000 Storage Court, Milwaukee, WI 53202"
+    ],
+    "company_name_stems": [
+      "Valtronix", "Quexford", "Zephirax", "Voxintel", "Quilmaven",
+      "Zarvexion", "Vexmultix", "Quovalize", "Zixmantel", "Volvexian",
+      "Quotaxis", "Zenvoque", "Vaxilume", "Quizzalex", "Zaxvento",
+      "Vultixor"
+    ],
+    "company_state_pool": [
+      "Nevada", "Texas", "Ohio", "Georgia", "Arizona", "Colorado",
+      "Tennessee", "Florida"
+    ],
+    "employee_given_names": [
+      "James", "Mary", "Robert", "Patricia", "Michael", "Jennifer",
+      "William", "Linda", "David", "Barbara", "Richard", "Elizabeth",
+      "Joseph", "Susan", "Thomas", "Jessica", "Charles", "Sarah",
+      "Christopher", "Karen", "Daniel", "Nancy", "Matthew", "Betty"
+    ],
+    "company_surnames": [
+      "Vexholm", "Quorland", "Zaxburg", "Vovstein", "Quilmont",
+      "Zarvex", "Veltman", "Quixley", "Zimvale", "Voxford",
+      "Quotley", "Zenvard", "Vaxwell", "Quozzer", "Zixford",
+      "Vultane", "Quelvale", "Zixwater", "Vorquex", "Quaxley"
+    ],
+    "company_name_templates": {
+      "manufacturing": [
+        "{surname} Manufacturing, Inc.",
+        "{surname} Industries, Inc.",
+        "{surname} Products Company"
+      ],
+      "staffing_services": [
+        "{stem} Staffing Services, LLC",
+        "{surname} Workforce Solutions, Inc.",
+        "{stem} Personnel Network, LLC"
+      ]
+    },
+    "staffing_customer_approver_names": [
+      "William Vaxwell", "Jessica Quozzer", "Charles Zixford",
+      "Sarah Vultane", "Thomas Quelvale"
+    ],
+    "default_staffing_approver": "Christopher Quotner",
+    "role_organizations": {
+      "payroll_clearing_bank": "Quilzero Payroll Services",
+      "benefits_clearinghouse": "Vexquote Benefits Exchange",
+      "warehouse_bank": "Zimvault Warehouse Trust"
+    }
+  }
+}

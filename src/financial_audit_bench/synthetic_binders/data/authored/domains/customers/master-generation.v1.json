@@ -1,0 +1,68 @@
+{
+  "resource_id": "authored.customers.master-generation.v1",
+  "values": {
+        "synthetic_sales_tax": {
+          "invented_rate_list": ["0.04123", "0.06789", "0.09321"],
+          "resale_cadence_divisor": 4,
+          "services_rule": {
+            "sales_tax_status": "not_applicable",
+            "sales_tax_rate": null,
+            "tax_exemption_certificate": null
+          },
+          "goods_resale_exempt_rule": {
+            "sales_tax_status": "resale_exempt",
+            "sales_tax_rate": "0",
+            "tax_exemption_certificate": "generate_certificate"
+          },
+          "goods_taxable_rule": {
+            "sales_tax_status": "taxable",
+            "tax_exemption_certificate": null
+          },
+          "certificate": {
+            "format": "SYN-Q4N-{body_6}-{check_2}",
+            "body_multiplier": 7919,
+            "body_increment": 104729,
+            "body_modulus": 1000000,
+            "body_width": 6,
+            "check_multiplier": 43,
+            "check_increment": 17,
+            "check_modulus": 97,
+            "check_width": 2
+          }
+        },
+        "identity": {
+          "ordinal": {
+            "minimum": 1,
+            "maximum": 999999
+          },
+          "templates": {
+            "trade": {
+              "customer_id": "CUS-SYN-Q7M-{ordinal6}",
+              "customer_name": "catalog_generated_trade_organization"
+            },
+            "staffing_service": {
+              "customer_id": "CUS-SYN-R4K-{ordinal6}",
+              "customer_name": "catalog_generated_staffing_organization"
+            }
+          }
+        },
+        "customer_type": {
+          "mapping": {
+            "trade": {
+              "const": "commercial"
+            },
+            "staffing_service": {
+              "const": "commercial"
+            }
+          }
+        },
+        "binding": {
+          "default_fields_exact": {
+            "salesperson": "SP-SYN-NOT-ASSIGNED",
+            "account_status": "ACTIVE",
+            "related_party": false,
+            "billing_cycle_class": null
+          }
+        }
+  }
+}

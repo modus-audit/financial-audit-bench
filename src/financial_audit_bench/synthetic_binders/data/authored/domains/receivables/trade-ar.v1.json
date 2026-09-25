@@ -1,0 +1,108 @@
+{
+  "resource_id": "authored.receivables.trade-ar.v1",
+  "values": {
+        "annual_sales_band": [
+          3000000,
+          4500000
+        ],
+        "cogs_ratio_clamp": [
+          0.55,
+          0.73
+        ],
+        "inventory_days_band": [
+          24,
+          44
+        ],
+        "inventory_days_guardrail": [
+          24,
+          120
+        ],
+        "prior_year_divisor": 1.06,
+        "ar_days_band": [
+          33,
+          47
+        ],
+        "active_customer_count": 36,
+        "open_item_floor": 24,
+        "invoice_amount_band": [
+          2000,
+          20000
+        ],
+        "monthly_jitter": [
+          0.91,
+          1.09
+        ],
+        "credit_invoice_share": 0.05,
+        "credit_fraction": 0.1,
+        "partial_payment_share": 0.13,
+        "partial_payment_fractions": [
+          0.6,
+          0.4
+        ],
+        "partial_payment_lag_days": 15,
+        "subsequent_collection_share": 0.72,
+        "terms": [
+          "net 15",
+          "net 15",
+          "net 15",
+          "net 30",
+          "net 30",
+          "net 30",
+          "net 30",
+          "net 30",
+          "net 30",
+          "net 30",
+          "net 30",
+          "net 30",
+          "net 30",
+          "net 30",
+          "net 30",
+          "net 45",
+          "net 45",
+          "net 45",
+          "net 45",
+          "net 60"
+        ],
+        "opening_dso_band": [
+          33,
+          47
+        ],
+        "opening_invoice_count": 30,
+        "opening_equal_allocation_probability": 0.5,
+        "opening_weight_band": [
+          0.8,
+          1.2
+        ],
+        "freight_invoice_share": 0.25,
+        "freight_fraction": 0.04,
+        "discount_invoice_share": 0.2,
+        "discount_fraction": 0.03,
+        "subsequent_cutoff_invoice_band": [
+          5000,
+          15000
+        ],
+        "subsequent_receipt_lag_days": 45,
+        "allowance_review_lag_days": 30,
+        "allowance_sensitivity_rate": 0.01,
+        "aging_ladder": [
+          ["current", 0.6, -30, -1, 0.0],
+          ["1-30", 0.25, 1, 30, 0.05],
+          ["31-60", 0.1, 31, 60, 0.2],
+          ["61-90", 0.03, 61, 90, 0.5],
+          ["over-90", 0.02, 91, 180, 1.0]
+        ],
+        "credit_reasons": [
+          "pricing concession",
+          "returned goods",
+          "short shipment",
+          "damaged in transit",
+          "billing correction"
+        ],
+        "service_credit_reasons": [
+          "pricing concession",
+          "billing correction",
+          "billing rate adjustment",
+          "duplicate billing"
+        ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "files": [
+    {
+      "path": "accounting.json",
+      "sha256": "d983de8afb3630d020a152f7c529b50e5af761433fefd1991a3610e1b233bcf5"
+    },
+    {
+      "path": "provenance.json",
+      "sha256": "df1a1c7db2e91fd917b1e2fa3ab9e10dc1bac6050a684f50ff56132a1d3cedb7"
+    },
+    {
+      "path": "scope.json",
+      "sha256": "fa334183a97b9833fc5cee57b980f7bd37c8f74c2bfbeb48f0a77339b6fdc754"
+    },
+    {
+      "path": "../definitions/block-queries.json",
+      "sha256": "81e30e0ab77fff9ac11a357f3c0fff31741b7c9046fbdde0ad63e56f4ed281b2"
+    },
+    {
+      "path": "../definitions/block-schemas.json",
+      "sha256": "84102da9091f1d96bde70ac67ca32e6b6f682a62fa0fe0b14aff18d32fabcdfe"
+    },
+    {
+      "path": "../definitions/canonicalization.json",
+      "sha256": "110a31984e9b21d279840c3c0e81349261fdbf37cdd76029ee909b3b21f22ba1"
+    },
+    {
+      "path": "../definitions/categories.json",
+      "sha256": "b4ff862cbcb73ffc8ff94ed9e82ab0af0fa2f266abd26fac780c2b966059682c"
+    },
+    {
+      "path": "../definitions/financial-and-block-priors.json",
+      "sha256": "f5ef50f2e7f0c2b231564439e3c3f219f02bd215c742ce100a80c82cadb86db7"
+    },
+    {
+      "path": "../definitions/postprocessing.json",
+      "sha256": "b93656993cb21ae1b36f626555e9b04a3225aa8db8501972f915e1f8fe11ad5a"
+    },
+    {
+      "path": "../definitions/scalar-queries.json",
+      "sha256": "5b98aa540e0a2e3feacfba235412978be7471cda03c1c63fc87649171fa74a39"
+    },
+    {
+      "path": "../definitions/target-shapes.json",
+      "sha256": "13858de1373fed433b6e28182282a21f67bd8cc04d87b00dc13286fd1948645a"
+    },
+    {
+      "path": "../../../src/financial_audit_bench/synthetic_binders/data/dp/releases/dp-priors/manifest.json",
+      "sha256": "e733ee0c2a37375f1da112e557963aa1dcc2bf5620e2af4a215c24c8b9ba3124"
+    }
+  ]
+}

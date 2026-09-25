@@ -1,0 +1,154 @@
+{
+  "blocks": {
+    "families": {
+      "aje_book": {
+        "categorical_distributions": {
+          "kind_mix": {
+            "categories": [
+              "depreciation",
+              "amortization",
+              "straight_line_rent",
+              "bad_debt_allowance",
+              "prepaid",
+              "tax",
+              "investment_fv",
+              "inventory_cogs",
+              "intercompany",
+              "equity_distribution",
+              "interest_debt",
+              "accrual",
+              "revenue_ar",
+              "cash_bank",
+              "reclass",
+              "correction_reversal",
+              "other"
+            ],
+            "weight": "one per entry"
+          },
+          "magnitude_mix": {
+            "categories": [
+              "lt_1e-4",
+              "1e-4_1e-3",
+              "1e-3_1e-2",
+              "1e-2_1e-1",
+              "1e-1_1",
+              "ge_1"
+            ],
+            "weight": "one per entry, by log10(amount_to_revenue)"
+          }
+        },
+        "counts": {
+          "entry_count": {
+            "cap": 20
+          }
+        },
+        "tau": 1
+      },
+      "ap_activity": {
+        "shipped_projection": {
+          "fields": [
+            "binder_id",
+            "business_type",
+            "expense_class"
+          ],
+          "omitted_fields": "All reconstructed bill rows, amounts, dates, payment attributes, settlement attributes, and vendor-to-rent ratios are excluded from the shipped release."
+        },
+        "categorical_distributions": {
+          "bill_month_mix": {
+            "categories": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "11",
+              "12"
+            ],
+            "weight": "one per bill"
+          },
+          "expense_class_mix": {
+            "categories": [
+              "management_fees",
+              "mortgage_or_escrow",
+              "owner_related",
+              "professional_fees",
+              "taxes_and_licenses",
+              "insurance",
+              "repairs_and_maintenance",
+              "utilities",
+              "general_operating"
+            ],
+            "weight": "one-hot per vendor-year unit"
+          },
+          "settlement_lag_mix": {
+            "categories": [
+              "0",
+              "1_7",
+              "8_30",
+              "31_60",
+              "61_plus",
+              "open"
+            ],
+            "weight": "one per bill; open = paid fraction below 1"
+          }
+        },
+        "counts": {
+          "vendor_count": {
+            "cap": 12
+          }
+        },
+        "tau": 12
+      }
+    },
+    "resolution": 60
+  },
+  "financial": {
+    "mechanism": {
+      "delta": 1e-05,
+      "min_segment_mass": 25,
+      "n_value_bins": 8,
+      "quantile_grid_points": 129,
+      "quantile_levels": [
+        0.05,
+        0.1,
+        0.25,
+        0.5,
+        0.75,
+        0.9,
+        0.95
+      ],
+      "quantile_mechanism": {
+        "accounting_family": "exponential",
+        "algorithm": "JointExp",
+        "invocation_scope": "one invocation jointly releases all declared levels for one retained financial target",
+        "utility_sensitivity": 2.0
+      }
+    },
+    "queries": {
+      "log10_bounds": {
+        "balance_sheet_ratio": [
+          -6.0,
+          2.0
+        ],
+        "rate": [
+          -4.0,
+          0.0
+        ]
+      },
+      "targets": {
+        "ratio.accounts_receivable_to_revenue": "balance_sheet_ratio",
+        "ratio.inventory_to_cogs": "balance_sheet_ratio",
+        "ratio.inventory_to_revenue": "balance_sheet_ratio",
+        "ratio.outstanding_checks_to_bank_balance": "balance_sheet_ratio",
+        "ratio.payroll_tax_to_wages": "rate",
+        "ratio.payroll_to_revenue": "balance_sheet_ratio"
+      }
+    }
+  },
+  "schema": "dp_priors_financial_and_blocks"
+}

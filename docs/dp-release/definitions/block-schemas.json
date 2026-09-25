@@ -1,0 +1,43 @@
+{
+  "kinds": [
+    "bucketized_numeric",
+    "closed_categorical"
+  ],
+  "schema": "dp_priors_block_schemas",
+  "target_count": 3,
+  "targets": {
+    "block.account_range_map": {
+      "channel_id": "block.account_range_map::block_comp",
+      "fields": [
+        {
+          "kind": "closed_categorical",
+          "name": "is_nonstandard_split"
+        }
+      ],
+      "resolution": 60,
+      "tau": 20
+    },
+    "block.pair_tie_class_matrix": {
+      "channel_id": "block.pair_tie_class_matrix::block_comp",
+      "fields": [
+        {
+          "kind": "closed_categorical",
+          "name": "tie_class"
+        }
+      ],
+      "resolution": 60,
+      "tau": 20
+    },
+    "block.year_end_true_up_cluster": {
+      "channel_id": "block.year_end_true_up_cluster::block_comp",
+      "fields": [
+        {
+          "kind": "bucketized_numeric",
+          "name": "creation_lag_days"
+        }
+      ],
+      "resolution": 60,
+      "tau": 20
+    }
+  }
+}

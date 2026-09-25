@@ -1,0 +1,96 @@
+{
+  "resource_id": "authored.business-types.workforce.v1",
+  "values": {
+    "employee_roles": {
+      "manufacturing": [
+        [
+          "Plant Manager",
+          "2.00",
+          "singleton"
+        ],
+        [
+          "Production Supervisor",
+          "1.70",
+          "few:3"
+        ],
+        [
+          "Production Cell Operator",
+          "1.40",
+          "share:0.40"
+        ],
+        [
+          "Process Technician",
+          "1.30",
+          "share:0.30"
+        ],
+        [
+          "Finishing Operator",
+          "1.10",
+          "share:0.20"
+        ],
+        [
+          "Material Handler",
+          "1.00",
+          "share:0.10"
+        ]
+      ],
+      "staffing_services": [
+        [
+          "Branch Manager",
+          "1.70",
+          "singleton"
+        ],
+        [
+          "Recruiter",
+          "1.40",
+          "few:2"
+        ],
+        [
+          "Warehouse Associate",
+          "1.10",
+          "share:0.45"
+        ],
+        [
+          "Administrative Associate",
+          "1.00",
+          "share:0.30"
+        ],
+        [
+          "Customer Service Representative",
+          "0.90",
+          "share:0.25"
+        ]
+      ]
+    },
+    "headcount_band": {
+      "manufacturing": [
+        30,
+        300
+      ],
+      "staffing_services": [
+        5,
+        150
+      ]
+    },
+    "payroll_share_band": {
+      "manufacturing": [
+        0.1,
+        0.4
+      ],
+      "staffing_services": [
+        0.4,
+        0.9
+      ]
+    },
+    "pay_periods": {
+      "manufacturing": 24,
+      "staffing_services": 26
+    },
+    "roster_defaults": {
+      "employee_class": "administration",
+      "employment_basis": "salary",
+      "department": "Administration",
+      "termination_reason": "not_provided"
+    }
+  }
+}

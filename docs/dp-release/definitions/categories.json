@@ -1,0 +1,63 @@
+{
+  "schema": "dp_priors_categories",
+  "targets": {
+    "selection.account_code_format": [
+      "numeric",
+      "zero_padded_text",
+      "base_with_suffix",
+      "dotted_decimal",
+      "fused_code_name",
+      "nested_subaccount_path",
+      "name_only"
+    ],
+    "selection.consolidation_presentation": [
+      "combined_multi_entity",
+      "separate_per_entity",
+      "columnar_consolidating_tb",
+      "class_based_profit_and_loss",
+      "standalone_single_entity"
+    ],
+    "selection.grouping_structure": [
+      "flat_account_list",
+      "grouped_with_subtotals",
+      "indentation_hierarchy",
+      "working_tb",
+      "mixed"
+    ],
+    "selection.opening_convention_per_export": [
+      "opening_rows_present",
+      "activity_only",
+      "mixed_by_export"
+    ],
+    "selection.pay_frequency": [
+      "weekly",
+      "biweekly",
+      "semimonthly",
+      "monthly",
+      "quarterly",
+      "mixed_by_entity",
+      "mixed_by_employee_class"
+    ],
+    "selection.tb_dialect": [
+      "code_name_debit_credit",
+      "single_signed_balance",
+      "balance_forward",
+      "opening_adjustment_ending",
+      "pivot_with_dimensions",
+      "stacked_manager_report",
+      "two_row_header"
+    ],
+    "vocab.memo_template_library": [
+      "accrual",
+      "purpose_leading",
+      "check",
+      "bill",
+      "transfer",
+      "system_generated",
+      "sweep",
+      "period_stamped",
+      "reversal",
+      "reclassification"
+    ]
+  }
+}

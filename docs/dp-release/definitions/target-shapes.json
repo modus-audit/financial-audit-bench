@@ -1,0 +1,219 @@
+{
+  "schema": "dp_priors_target_shapes",
+  "shape_channel_counts": {
+    "BLOCK_COMP": 3,
+    "CLOSED_CAT": 5,
+    "SCALAR_HIST": 6,
+    "VOCAB": 2
+  },
+  "target_count": 16,
+  "targets": {
+    "block.account_range_map": {
+      "channels": [
+        {
+          "channel_id": "block.account_range_map::block_comp",
+          "shape": "BLOCK_COMP"
+        }
+      ],
+      "target_kind": "block",
+      "value_type": "structured"
+    },
+    "block.pair_tie_class_matrix": {
+      "channels": [
+        {
+          "channel_id": "block.pair_tie_class_matrix::block_comp",
+          "shape": "BLOCK_COMP"
+        }
+      ],
+      "target_kind": "block",
+      "value_type": "structured"
+    },
+    "block.year_end_true_up_cluster": {
+      "channels": [
+        {
+          "channel_id": "block.year_end_true_up_cluster::block_comp",
+          "shape": "BLOCK_COMP"
+        }
+      ],
+      "target_kind": "block",
+      "value_type": "event-list"
+    },
+    "count.gl_annual_line_volume_class": {
+      "channels": [
+        {
+          "channel_id": "count.gl_annual_line_volume_class::scalar_hist",
+          "params": {
+            "missing_category": true,
+            "n_bins": 8
+          },
+          "shape": "SCALAR_HIST"
+        }
+      ],
+      "target_kind": "root_count",
+      "value_type": "scalar (bucketed)"
+    },
+    "hist.day_of_month_posting": {
+      "channels": [
+        {
+          "channel_id": "hist.day_of_month_posting::scalar_hist",
+          "params": {
+            "missing_category": true,
+            "n_bins": 8
+          },
+          "shape": "SCALAR_HIST"
+        }
+      ],
+      "target_kind": "amount_distribution",
+      "value_type": "histogram"
+    },
+    "hist.lines_per_entry": {
+      "channels": [
+        {
+          "channel_id": "hist.lines_per_entry::scalar_hist",
+          "params": {
+            "missing_category": true,
+            "n_bins": 8
+          },
+          "shape": "SCALAR_HIST"
+        }
+      ],
+      "target_kind": "amount_distribution",
+      "value_type": "histogram"
+    },
+    "ratio.manual_entry_share": {
+      "channels": [
+        {
+          "channel_id": "ratio.manual_entry_share::scalar_hist",
+          "params": {
+            "missing_category": true,
+            "n_bins": 8
+          },
+          "shape": "SCALAR_HIST"
+        }
+      ],
+      "target_kind": "total",
+      "value_type": "2 scalars"
+    },
+    "ratio.out_of_period_line_share": {
+      "channels": [
+        {
+          "channel_id": "ratio.out_of_period_line_share::scalar_hist",
+          "params": {
+            "missing_category": true,
+            "n_bins": 8
+          },
+          "shape": "SCALAR_HIST"
+        }
+      ],
+      "target_kind": "total",
+      "value_type": "scalar ratio"
+    },
+    "selection.account_code_format": {
+      "channels": [
+        {
+          "channel_id": "selection.account_code_format::closed_cat",
+          "params": {
+            "missing_category": true
+          },
+          "shape": "CLOSED_CAT"
+        }
+      ],
+      "target_kind": "categorical_pattern",
+      "value_type": "selection"
+    },
+    "selection.consolidation_presentation": {
+      "channels": [
+        {
+          "channel_id": "selection.consolidation_presentation::closed_cat",
+          "params": {
+            "missing_category": true
+          },
+          "shape": "CLOSED_CAT"
+        }
+      ],
+      "target_kind": "categorical_pattern",
+      "value_type": "selection"
+    },
+    "selection.formula_presence": {
+      "channels": [
+        {
+          "channel_id": "selection.formula_presence::scalar_hist",
+          "params": {
+            "missing_category": true,
+            "n_bins": 8
+          },
+          "shape": "SCALAR_HIST"
+        }
+      ],
+      "target_kind": "categorical_pattern",
+      "value_type": "scalar"
+    },
+    "selection.grouping_structure": {
+      "channels": [
+        {
+          "channel_id": "selection.grouping_structure::closed_cat",
+          "params": {
+            "missing_category": true
+          },
+          "shape": "CLOSED_CAT"
+        }
+      ],
+      "target_kind": "categorical_pattern",
+      "value_type": "selection"
+    },
+    "selection.opening_convention_per_export": {
+      "channels": [
+        {
+          "channel_id": "selection.opening_convention_per_export::closed_cat",
+          "params": {
+            "missing_category": true
+          },
+          "shape": "CLOSED_CAT"
+        }
+      ],
+      "target_kind": "categorical_pattern",
+      "value_type": "selection"
+    },
+    "selection.pay_frequency": {
+      "channels": [
+        {
+          "channel_id": "selection.pay_frequency::vocab",
+          "params": {
+            "k": 5,
+            "mode": "closed"
+          },
+          "shape": "VOCAB"
+        }
+      ],
+      "target_kind": "categorical_pattern",
+      "value_type": "vocabulary"
+    },
+    "selection.tb_dialect": {
+      "channels": [
+        {
+          "channel_id": "selection.tb_dialect::closed_cat",
+          "params": {
+            "missing_category": true
+          },
+          "shape": "CLOSED_CAT"
+        }
+      ],
+      "target_kind": "categorical_pattern",
+      "value_type": "selection"
+    },
+    "vocab.memo_template_library": {
+      "channels": [
+        {
+          "channel_id": "vocab.memo_template_library::vocab",
+          "params": {
+            "k": 5,
+            "mode": "closed"
+          },
+          "shape": "VOCAB"
+        }
+      ],
+      "target_kind": "categorical_pattern",
+      "value_type": "vocabulary (template -> frequency)"
+    }
+  }
+}

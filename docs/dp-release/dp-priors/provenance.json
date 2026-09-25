@@ -1,0 +1,98 @@
+{
+ "release_label": "dp-priors",
+ "released_fields": [
+  {
+   "payload_fields": [
+    "ratio.accounts_receivable_to_revenue"
+   ],
+   "payload_path": "financial-priors.json.gz",
+   "privacy_ledger_labels": [
+    "marginal:ratio.accounts_receivable_to_revenue",
+    "quantiles:ratio.accounts_receivable_to_revenue"
+   ],
+   "released_id": "ratio.accounts_receivable_to_revenue"
+  },
+  {
+   "payload_fields": [
+    "ratio.inventory_to_cogs"
+   ],
+   "payload_path": "financial-priors.json.gz",
+   "privacy_ledger_labels": [
+    "marginal:ratio.inventory_to_cogs",
+    "quantiles:ratio.inventory_to_cogs"
+   ],
+   "released_id": "ratio.inventory_to_cogs"
+  },
+  {
+   "payload_fields": [
+    "ratio.inventory_to_revenue"
+   ],
+   "payload_path": "financial-priors.json.gz",
+   "privacy_ledger_labels": [
+    "marginal:ratio.inventory_to_revenue",
+    "quantiles:ratio.inventory_to_revenue"
+   ],
+   "released_id": "ratio.inventory_to_revenue"
+  },
+  {
+   "payload_fields": [
+    "ratio.outstanding_checks_to_bank_balance"
+   ],
+   "payload_path": "financial-priors.json.gz",
+   "privacy_ledger_labels": [
+    "marginal:ratio.outstanding_checks_to_bank_balance",
+    "quantiles:ratio.outstanding_checks_to_bank_balance"
+   ],
+   "released_id": "ratio.outstanding_checks_to_bank_balance"
+  },
+  {
+   "payload_fields": [
+    "ratio.payroll_tax_to_wages"
+   ],
+   "payload_path": "financial-priors.json.gz",
+   "privacy_ledger_labels": [
+    "marginal:ratio.payroll_tax_to_wages",
+    "quantiles:ratio.payroll_tax_to_wages"
+   ],
+   "released_id": "ratio.payroll_tax_to_wages"
+  },
+  {
+   "payload_fields": [
+    "ratio.payroll_to_revenue"
+   ],
+   "payload_path": "financial-priors.json.gz",
+   "privacy_ledger_labels": [
+    "marginal:ratio.payroll_to_revenue",
+    "quantiles:ratio.payroll_to_revenue"
+   ],
+   "released_id": "ratio.payroll_to_revenue"
+  },
+  {
+   "payload_fields": [
+    "blocks[].binder_id",
+    "blocks[].business_type",
+    "blocks[].rows[].kind",
+    "blocks[].rows[].amount_to_revenue"
+   ],
+   "payload_path": "blocks/aje_book.json.gz",
+   "privacy_ledger_labels": [
+    "block:aje_book:kind_mix",
+    "block:aje_book:magnitude_mix",
+    "block:aje_book:entry_count"
+   ],
+   "released_id": "block.aje_book"
+  },
+  {
+   "payload_fields": [
+    "blocks"
+   ],
+   "payload_path": "blocks/ap_activity.json.gz",
+   "privacy_ledger_labels": [
+    "block.vendor_bill_cadence_chains::block_comp:cadence_bill_count_joint",
+    "count.vendor_fanout::scalar_hist"
+   ],
+   "released_id": "block.ap_activity"
+  }
+ ],
+ "schema": "dp_priors_provenance"
+}

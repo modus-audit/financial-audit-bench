@@ -1,0 +1,31 @@
+{
+  "resource_id": "authored.chart-of-accounts.base-rows.v1",
+  "values": {
+    "base_rows": [
+      {"account_class": "asset", "close_to_gl_account_id": null, "fiscal_close_behavior": "carryforward", "gl_account_id": "GL-CASH-001", "is_cash_account": true, "name": "Cash"},
+      {"account_class": "revenue", "close_to_gl_account_id": "GL-CAPITAL-001", "fiscal_close_behavior": "close_to_equity", "gl_account_id": "GL-REVENUE-001", "is_cash_account": false, "name": "Other income"},
+      {"account_class": "expense", "close_to_gl_account_id": "GL-CAPITAL-001", "fiscal_close_behavior": "close_to_equity", "gl_account_id": "GL-EXPENSE-001", "is_cash_account": false, "name": "General and administrative expense"},
+      {"account_class": "expense", "close_to_gl_account_id": "GL-CAPITAL-001", "fiscal_close_behavior": "close_to_equity", "gl_account_id": "GL-WAGES-001", "is_cash_account": false, "name": "Wages and salaries"},
+      {"account_class": "expense", "close_to_gl_account_id": "GL-CAPITAL-001", "fiscal_close_behavior": "close_to_equity", "gl_account_id": "GL-PAYROLL-TAX-001", "is_cash_account": false, "name": "Employer payroll taxes"},
+      {"account_class": "liability", "close_to_gl_account_id": null, "fiscal_close_behavior": "carryforward", "gl_account_id": "GL-AP-001", "is_cash_account": false, "name": "Accounts payable"},
+      {"account_class": "liability", "close_to_gl_account_id": null, "fiscal_close_behavior": "carryforward", "gl_account_id": "GL-ACCRUED-001", "is_cash_account": false, "name": "Accrued expenses"},
+      {"account_class": "liability", "close_to_gl_account_id": null, "fiscal_close_behavior": "carryforward", "gl_account_id": "GL-WH-PAYABLE-001", "is_cash_account": false, "name": "Payroll withholdings payable"},
+      {"account_class": "asset", "close_to_gl_account_id": null, "fiscal_close_behavior": "carryforward", "gl_account_id": "GL-AR-001", "is_cash_account": false, "name": "Accounts receivable"},
+      {"account_class": "contra_asset", "close_to_gl_account_id": null, "fiscal_close_behavior": "carryforward", "gl_account_id": "GL-ALLOWANCE-001", "is_cash_account": false, "name": "Allowance for credit losses"},
+      {"account_class": "expense", "close_to_gl_account_id": "GL-CAPITAL-001", "fiscal_close_behavior": "close_to_equity", "gl_account_id": "GL-BAD-DEBT-001", "is_cash_account": false, "name": "Provision for credit losses"},
+      {"account_class": "liability", "close_to_gl_account_id": null, "fiscal_close_behavior": "carryforward", "gl_account_id": "GL-SALES-TAX-001", "is_cash_account": false, "name": "Sales tax payable"},
+      {"account_class": "asset", "close_to_gl_account_id": null, "fiscal_close_behavior": "carryforward", "gl_account_id": "GL-INVENTORY-001", "is_cash_account": false, "name": "Inventory"},
+      {"account_class": "expense", "close_to_gl_account_id": "GL-CAPITAL-001", "fiscal_close_behavior": "close_to_equity", "gl_account_id": "GL-COGS-001", "is_cash_account": false, "name": "Cost of goods sold"},
+      {"account_class": "equity", "close_to_gl_account_id": null, "fiscal_close_behavior": "equity_destination", "gl_account_id": "GL-CAPITAL-001", "is_cash_account": false, "name": "Retained earnings"},
+      {"account_class": "asset", "close_to_gl_account_id": null, "fiscal_close_behavior": "carryforward", "gl_account_id": "GL-FIXED-ASSET-001", "is_cash_account": false, "name": "Property and equipment"},
+      {"account_class": "contra_asset", "close_to_gl_account_id": null, "fiscal_close_behavior": "carryforward", "gl_account_id": "GL-ACCUM-DEPR-001", "is_cash_account": false, "name": "Accumulated depreciation"},
+      {"account_class": "expense", "close_to_gl_account_id": "GL-CAPITAL-001", "fiscal_close_behavior": "close_to_equity", "gl_account_id": "GL-DEPR-EXPENSE-001", "is_cash_account": false, "name": "Depreciation expense"},
+      {"account_class": "revenue", "close_to_gl_account_id": "GL-CAPITAL-001", "fiscal_close_behavior": "close_to_equity", "gl_account_id": "GL-SERVICE-REVENUE-001", "is_cash_account": false, "name": "Service revenue"}
+    ],
+    "captions_by_business_type": {
+      "manufacturing": {
+        "GL-SERVICE-REVENUE-001": "Product sales"
+      }
+    }
+  }
+}

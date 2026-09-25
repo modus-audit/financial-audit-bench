@@ -1,0 +1,304 @@
+{
+  "resource_id": "authored.global.operating-policy.v1",
+  "values": {
+    "policies": {
+      "policy.operating_revenue_scale": {
+        "unit": "annual_usd",
+        "bands_by_business_type": {
+          "manufacturing": [
+            8000000,
+            40000000
+          ],
+          "staffing_services": [
+            4000000,
+            24000000
+          ]
+        }
+      },
+      "policy.opening_operating_cash": {
+        "unit": "months_of_operating_outflows",
+        "bands_by_business_type": {
+          "manufacturing": [
+            2.0,
+            6.0
+          ],
+          "staffing_services": [
+            2.5,
+            7.0
+          ]
+        }
+      },
+      "policy.type_flavors.margin_bands.v1": {
+        "unit": "gross_margin_ratio",
+        "bands_by_business_type": {
+          "manufacturing": [
+            "0.05",
+            "0.55"
+          ],
+          "staffing_services": [
+            "0.18",
+            "0.20"
+          ]
+        }
+      }
+    },
+    "binder_case": {
+      "case_id": "SYNTHETIC-CASE-001",
+      "target_fiscal_year": 2025
+    },
+    "capitalization": {
+      "threshold_amount": "7500.00",
+      "depreciation_convention": "actual_date",
+      "repairs_policy": "expense ordinary repairs; capitalize improvements"
+    },
+    "prior_bank_statement_period_end": {
+      "month": 12,
+      "day": 31,
+      "year_offset": -1
+    },
+    "engagement_calendar": {
+      "scenario_offsets": {
+        "standard_year_end": {
+          "confirmation_response": 50,
+          "report": 75
+        }
+      },
+      "milestone_day_offsets": {
+        "confirmation_send_date": -21,
+        "bank_reconciliation_prepared_date": 8,
+        "bank_reconciliation_reviewed_date": 10,
+        "cutoff_bank_statement_start": 1,
+        "cutoff_bank_statement_end": 31
+      },
+      "required_milestones": [
+        "financial_statement_date",
+        "inventory_observation_date",
+        "confirmation_send_date",
+        "confirmation_response_cutoff",
+        "bank_reconciliation_prepared_date",
+        "bank_reconciliation_reviewed_date",
+        "cutoff_bank_statement_start",
+        "cutoff_bank_statement_end",
+        "report_date"
+      ],
+      "chronology_constraints": [
+        [
+          "confirmation_send_date",
+          "confirmation_response_cutoff"
+        ],
+        [
+          "financial_statement_date",
+          "bank_reconciliation_prepared_date"
+        ],
+        [
+          "bank_reconciliation_prepared_date",
+          "bank_reconciliation_reviewed_date"
+        ],
+        [
+          "financial_statement_date",
+          "cutoff_bank_statement_start"
+        ],
+        [
+          "cutoff_bank_statement_start",
+          "cutoff_bank_statement_end"
+        ],
+        [
+          "cutoff_bank_statement_end",
+          "report_date"
+        ]
+      ],
+      "windows": [
+        [
+          "WIN-CASH-CUTOFF",
+          "cash",
+          "cutoff_bank_statement_start",
+          "cutoff_bank_statement_end",
+          "bank_activity_date"
+        ]
+      ]
+    },
+    "journal_risk": {
+      "access_rights_by_privilege": {
+        "preparer": [
+          true,
+          true,
+          false,
+          false
+        ],
+        "approver": [
+          false,
+          false,
+          true,
+          false
+        ],
+        "system": [
+          false,
+          true,
+          false,
+          true
+        ]
+      },
+      "estimate_tokens": [
+        "credit loss",
+        "allowance",
+        "bad debt",
+        "inventory reserve",
+        "obsolescence",
+        "shrinkage",
+        "depreciation",
+        "depreciat",
+        "payroll accrual",
+        "accrued wages",
+        "wages accrued",
+        "received not invoiced",
+        "not invoiced",
+        "rni",
+        "accrued expense",
+        "accrual",
+        "accrue",
+        "reserve",
+        "estimate",
+        "impairment"
+      ]
+    },
+    "planning_and_evidence": {
+      "named_evidence_providers": {
+        "CASH-01": [
+          "DOC-CASH-ACCOUNT-PACKAGE"
+        ],
+        "CASH-02": [
+          "DOC-CASH-ACCOUNT-PACKAGE"
+        ],
+        "CASH-03": [
+          "DOC-CASH-ACCOUNT-PACKAGE",
+          "DOC-BANK-RECONCILIATION"
+        ],
+        "CASH-04": [
+          "DOC-CASH-ACCOUNT-PACKAGE"
+        ],
+        "CASH-05": [
+          "DOC-CASH-ACCOUNT-PACKAGE"
+        ],
+        "CASH-07": [
+          "DOC-CASH-ACCOUNT-PACKAGE",
+          "DOC-BANK-STATEMENT-*-SUBSEQUENT"
+        ],
+        "AR-17": [
+          "AR-07"
+        ],
+        "AP-17": [
+          "AP-01",
+          "AP-04"
+        ],
+        "AP-18": [
+          "DOC-JOURNAL-EXPORT"
+        ],
+        "JE-01": [
+          "DOC-JOURNAL-EXPORT"
+        ],
+        "JE-10": [
+          "DOC-JOURNAL-EXPORT"
+        ],
+        "REV-07": [
+          "REV-01"
+        ]
+      },
+      "no_activity_statuses": [
+        "no_reportable_activity",
+        "not_supported_by_archetype"
+      ]
+    },
+    "ap_invoice_identifiers": {
+      "grammars": [
+        "bare_sequential",
+        "inv_prefixed",
+        "initials_prefixed",
+        "year_embedded",
+        "short_run"
+      ],
+      "counter_ranges": {
+        "bare_sequential": [
+          [
+            10000,
+            700000
+          ],
+          [
+            1,
+            40
+          ]
+        ],
+        "inv_prefixed": [
+          [
+            100,
+            90000
+          ],
+          [
+            1,
+            40
+          ]
+        ],
+        "initials_prefixed": [
+          [
+            1000,
+            30000
+          ],
+          [
+            1,
+            25
+          ]
+        ],
+        "year_embedded": [
+          [
+            40,
+            900
+          ],
+          [
+            1,
+            9
+          ]
+        ],
+        "short_run": [
+          [
+            800,
+            6000
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      }
+    },
+    "journal_presentation": {
+      "description_by_type": {
+        "bank": "Bank activity batch posting",
+        "opening_carryforward": "Opening balances carried forward from prior-year close",
+        "vendor_invoice": "Vendor invoice posting",
+        "adjusting": "Year-end adjusting entry per client schedule",
+        "depreciation": "Depreciation expense per depreciation schedule",
+        "payroll_withholding": "Employee withholding accrued per payroll register",
+        "payroll_tax_accrual": "Employer payroll tax accrued per payroll register",
+        "payroll_accrual": "Wages accrued for days worked after final pay period",
+        "payroll_accrual_reversal": "Reverse prior year accrued wages against first payroll",
+        "accrued_expense": "Accrue services received not invoiced at period end",
+        "cogs_relief": "Cost of goods sold relief on shipment",
+        "inventory_shrinkage": "Physical count adjustment per count sheets",
+        "production_stage_transfer": "Monthly production transfer between inventory stage accounts",
+        "revenue_recognition": "Customer invoice billed",
+        "credit_memo": "Credit memo issued against customer invoice",
+        "credit_loss_provision": "Credit-loss provision per allowance analysis",
+        "production_conversion_capitalization": "Manufacturing conversion costs capitalized to inventory"
+      },
+      "manual_journal_types": [
+        "vendor_invoice",
+        "adjusting",
+        "inventory_shrinkage",
+        "credit_memo",
+        "depreciation",
+        "payroll_accrual",
+        "payroll_accrual_reversal",
+        "accrued_expense"
+      ]
+    }
+  }
+}

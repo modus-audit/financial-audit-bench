@@ -1,0 +1,57 @@
+{
+  "accounting_summary": {
+    "financial": {
+      "ledger_entry_count": 12,
+      "rho": 0.04944271539865347,
+      "target_count": 6
+    },
+    "general_features": {
+      "channel_count": 16,
+      "ledger_entry_count": 19,
+      "rho": 0.14903165745578956,
+      "target_count": 16
+    },
+    "structured_blocks": {
+      "family_count": 2,
+      "ledger_entry_count": 5,
+      "rho": 0.05203341857379812
+    },
+    "total": {
+      "epsilon_at_delta": 3.647022199528197,
+      "ledger_entry_count": 36,
+      "rho": 0.25050779142824114
+    }
+  },
+  "financial_targets": [
+    "ratio.accounts_receivable_to_revenue",
+    "ratio.inventory_to_cogs",
+    "ratio.inventory_to_revenue",
+    "ratio.outstanding_checks_to_bank_balance",
+    "ratio.payroll_tax_to_wages",
+    "ratio.payroll_to_revenue"
+  ],
+  "privacy_policy": {
+    "adjacency": "add or remove one complete donor binder",
+    "conversion": "epsilon = rho + 2*sqrt(rho*ln(1/delta))",
+    "delta": 1e-05,
+    "vocab_discovery_event_delta": 0.0
+  },
+  "release_label": "dp-priors",
+  "schema": "dp_priors_scope",
+  "selection_constraints": {
+    "implementation_usage_used_for_selection": true,
+    "noisy_values_used_for_selection": false,
+    "privacy_cost_used_for_selection": false,
+    "sampled_values_used_for_selection": false,
+    "support_or_prevalence_used_for_selection": false
+  },
+  "selection_method": "historical_graph_output_influence_then_runtime_projection",
+  "selection_scope": [
+    "manufacturing",
+    "staffing_services"
+  ],
+  "structured_blocks": [
+    "block.aje_book",
+    "block.ap_activity"
+  ]
+}

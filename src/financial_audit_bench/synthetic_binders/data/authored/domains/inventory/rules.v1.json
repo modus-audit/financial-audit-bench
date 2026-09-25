@@ -1,0 +1,338 @@
+{
+  "resource_id": "authored.inventory.rules.v1",
+  "values": {
+    "grammar": {
+      "costing_method": "fifo",
+      "unit_cost_label": "FIFO Layer Cost per Ton",
+      "location_name": "Metal processing and storage area",
+      "location_type": "manufacturing_plant",
+      "unit_cost_bands": {
+        "raw_material": [
+          "25.00",
+          "25000.00"
+        ],
+        "work_in_process": [
+          "25.00",
+          "25000.00"
+        ],
+        "finished_goods": [
+          "25.00",
+          "25000.00"
+        ]
+      },
+      "categories": [
+        [
+          "raw_material",
+          "ton",
+          [
+            "Metal feedstock bundle A",
+            "Metal feedstock bundle B",
+            "Iron charge lot",
+            "Alloy additive lot",
+            "Metal sheet input",
+            "Metal bar input"
+          ]
+        ],
+        [
+          "work_in_process",
+          "ton",
+          [
+            "Metal batch in forming process",
+            "Metal batch in cutting process",
+            "Metal batch in leveling process",
+            "Metal batch in finishing process",
+            "Metal batch awaiting inspection",
+            "Metal batch awaiting transfer"
+          ]
+        ],
+        [
+          "finished_goods",
+          "ton",
+          [
+            "Finished metal coil A",
+            "Finished metal coil B",
+            "Finished metal plate A",
+            "Finished metal plate B",
+            "Finished metal bar A",
+            "Finished metal bar B",
+            "Finished metal sheet A",
+            "Finished metal sheet B"
+          ]
+        ]
+      ]
+    },
+    "policy": {
+      "procurement": {
+        "order_lead_business_days": {
+          "base": 6,
+          "ordinal_multiplier": 5,
+          "modulus": 9
+        },
+        "term_days_cycle": [
+          15,
+          23,
+          31,
+          46
+        ]
+      },
+      "ap_settlement": {
+        "target_business_days_before_due": 3,
+        "payment_run_weekdays": [
+          1,
+          4
+        ],
+        "bank_settlement_business_days": 1,
+        "payment_method": "ach"
+      },
+      "rni_accrual": {
+        "selection": {
+          "movement_kind": "purchase_receipt",
+          "item_category": "raw_material"
+        },
+        "rni_id_template": "RNI-{one_based_ordinal:02d}",
+        "accrual_id_template": "ACCRUAL-RNI-{one_based_ordinal:02d}"
+      }
+    },
+    "operations": {
+      "deterministic_generation": {
+        "draw_labels": {
+          "candidate_sample": "item.candidate_indexes",
+          "grammar_unit_cost": "item.unit_cost.{item_ordinal_3}",
+          "warehouse": "item.warehouse",
+          "sku_seed": "item.sku.seed",
+          "sku_step": "item.sku.step.{item_ordinal_3}",
+          "lot_seed": "item.lot.seed",
+          "season_amplitude": "flow.season.amplitude",
+          "season_peak": "flow.season.peak",
+          "season_jitter": "flow.season.jitter.{month_2}",
+          "lot_fraction": "flow.lot_fraction.{item_id}",
+          "reorder_cover": "flow.reorder_cover.{item_id}",
+          "receipt_reference": "flow.receipt.reference.{item_id}.{month_2}.{slot_2}",
+          "shipment_reference": "flow.shipment.reference.{item_id}.{month_2}.{slot_2}",
+          "cost_layer_age": "count.layer_age.{item_id}"
+        },
+        "peak_month_band": [
+          0,
+          12
+        ],
+        "lot_seed_range_inclusive": [
+          100,
+          800
+        ],
+        "lot_seed_multiplier": 10
+      },
+      "seasonal_amplitude": [
+        0.1,
+        0.3
+      ],
+      "month_jitter": [
+        0.9,
+        1.1
+      ],
+      "lot_fraction": [
+        0.05,
+        0.15
+      ],
+      "reorder_cover_months": [
+        1.0,
+        3.0
+      ],
+      "item_identity": {
+        "sku_seed_range_inclusive": [
+          1000,
+          7000
+        ],
+        "sku_step_range_inclusive": [
+          1,
+          9
+        ],
+        "sku_prefix_by_category": {
+          "raw_material": "RM",
+          "work_in_process": "WIP",
+          "finished_goods": "FG",
+          "fallback": "FG"
+        },
+        "costing_approval_status": "approved",
+        "item_status": "active",
+        "reserve_group": "standard"
+      },
+      "generic_location_defaults": {
+        "inventory_location_id": "LOC-001",
+        "count_required": true,
+        "ownership_status": "company_owned"
+      },
+      "sku_count_tiers": [
+        [
+          10000,
+          60
+        ],
+        [
+          50000,
+          65
+        ],
+        [
+          null,
+          70
+        ]
+      ],
+      "rni_receipt_target_value": 5000,
+      "rni_shipment_days_before_year_end": 12,
+      "rni_receipt_days_before_year_end": 5,
+      "rni_invoice_days_after_year_end": 10,
+      "outbound_kind": "sale_shipment",
+      "outbound_source_prefix": "SHP",
+      "count_selection_share": 0.1,
+      "count_shortage_share": 0.05,
+      "active_age_days": [
+        0,
+        90
+      ]
+    },
+    "steel_production": {
+      "raw_material_cost_per_ton": 500,
+      "wip_hours_per_ton": 10,
+      "finishing_hours_per_ton": 2,
+      "labor_rate": 30,
+      "overhead_rate": 20,
+      "raw_input_units": 100,
+      "wip_output_units": 92,
+      "finished_output_units": 90,
+      "monthly_weights": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "stage_days": {
+        "purchase_receipt": 3,
+        "raw_issue": 8,
+        "wip_completion": 13,
+        "wip_issue": 13,
+        "finished_completion": 18,
+        "shipment": 23
+      },
+      "movement_execution": {
+        "de_novo_template_source": "ARBITRARY-SYNTHETIC-STAGE-TEMPLATE",
+        "production_order_number_format": "MO-{year_2}{month_2}",
+        "purchase_receipt_source_format": "RCV-{year_4}{month_2}-{item_suffix_3}",
+        "raw_issue_source_format": "{production_order_number}-RAW_MATERIAL-ISS",
+        "wip_issue_source_format": "{production_order_number}-WORK_IN_PROCESS-ISS",
+        "wip_completion_source_format": "{production_order_number}-WIP-COMP",
+        "finished_completion_source_format": "{production_order_number}-FG-COMP",
+        "shipment_source_format": "SHP-{production_order_number}-{item_suffix_3}",
+        "in_transit_status_by_kind": {
+          "purchase_receipt": "received",
+          "production_completion": "completed",
+          "production_issue": "issued",
+          "sale_shipment": "shipped"
+        },
+        "shipping_terms_by_kind": {
+          "purchase_receipt": "FOB destination",
+          "production_completion": null,
+          "production_issue": null,
+          "sale_shipment": "FOB shipping point"
+        },
+        "production_order_uom": "tons",
+        "production_order_status": "completed"
+      },
+      "raw_price_month_factors": [
+        0.95,
+        0.96,
+        0.97,
+        0.98,
+        0.99,
+        1.0,
+        1.0,
+        1.01,
+        1.02,
+        1.03,
+        1.04,
+        1.05
+      ],
+      "raw_price_sku_offsets": [
+        -0.02,
+        -0.01,
+        0.0,
+        0.01,
+        0.02
+      ]
+    },
+    "execution": {
+      "movement_row_contract": {
+        "movement_id_format": "MOV-{sequence_4}",
+        "cutoff_status": "in_period",
+        "inbound_status": "received",
+        "internal_usage_status": "consumed",
+        "outbound_status": "shipped",
+        "inbound_shipping_terms": "FOB destination",
+        "outbound_shipping_terms": "FOB shipping point",
+        "internal_shipping_terms": null,
+        "internal_usage_kinds": [
+          "kitchen_usage"
+        ],
+        "ordinary_source_sequence_range_inclusive": [
+          30000,
+          89999
+        ],
+        "ordinary_receipt_source_prefix": "RCV",
+        "freight_duty_amount": "0.00",
+        "discount_amount": "0.00"
+      },
+      "monthly_movements": {
+        "purchase_receipts": {
+          "nominal_days": [
+            4,
+            11,
+            18,
+            25
+          ],
+          "ordinary_invoice_lag_calendar_days": 0,
+          "ordinary_shipment_lead_calendar_days": 3
+        },
+        "shipment_usage": {
+          "nominal_days": [
+            8,
+            15,
+            22,
+            "LAST_CALENDAR_DAY"
+          ]
+        }
+      },
+      "received_not_invoiced": {
+        "year_end_carry_out_documents": 1,
+        "minimum_quantity": 1,
+        "source_reference_format": "RCV-{fiscal_end_year}-YE-{document_ordinal_3}",
+        "in_transit_status": "received"
+      },
+      "physical_count_header": {
+        "date_offset_days_from_fiscal_end": 0,
+        "inventory_count_id": "COUNT-001",
+        "count_team": "COUNT-TEAM-SYN-001",
+        "supervisor": "EMP-SYN-COUNT-001",
+        "final_results_reference_format": "COUNT-RESULTS-{fiscal_end_year}",
+        "instructions_reference_format": "COUNT-INSTRUCTIONS-{fiscal_end_year}",
+        "freeze_time": "16:00:00Z",
+        "method": "WALL_TO_WALL_BLIND_DUAL_COUNT_WITH_MANDATORY_RECOUNT_ON_ANY_DISAGREEMENT",
+        "status": "FINAL_APPROVED"
+      },
+      "count_line_rules": {
+        "line_id_format": "Count {item_ordinal_3}",
+        "tag_number_format": "TAG-SYN-{item_ordinal_6}",
+        "generic_lot_balance_id_format": "LOT-{item_ordinal_3}",
+        "steel_lot_balance_id_format": "LOT-{item_ordinal_3}-{layer_ordinal_2}",
+        "approval_status": "approved",
+        "auditor_observation_source": "independent physical test count",
+        "selection_source": "management full count",
+        "steel_variance_unit_decimal_places": 12
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "dp_priors_canonicalization",
+  "rules": [
+    {
+      "op": "nfkc_casefold",
+      "note": "unicode NFKC then casefold"
+    },
+    {
+      "op": "collapse_whitespace",
+      "note": "runs of whitespace -> single space, strip"
+    },
+    {
+      "op": "digits_to_hash",
+      "note": "every decimal digit -> '#', so years/amounts/ids template together"
+    },
+    {
+      "op": "strip_punct_edges",
+      "note": "leading/trailing punctuation removed"
+    },
+    {
+      "op": "truncate",
+      "max_chars": 64,
+      "note": "hard cap on token length"
+    }
+  ],
+  "drop_if": [
+    {
+      "cond": "empty_after_rules"
+    },
+    {
+      "cond": "no_alpha",
+      "note": "tokens with no remaining letters (pure #/punct) carry no vocabulary signal"
+    },
+    {
+      "cond": "extraction_artifact",
+      "pattern": "\\b(ratio|rate|count|vocab|selection|hist|block|series|lag)\\.[a-z_]+",
+      "boilerplate": [
+        "none observed",
+        "none_observed",
+        "not observed",
+        "not_observed"
+      ],
+      "note": "Discard target identifiers and missing-value boilerplate. This structural, data-independent filter applies to vocabulary tokens and closed categories."
+    }
+  ]
+}

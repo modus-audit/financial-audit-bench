@@ -1,0 +1,30 @@
+{
+  "payloads": {
+    "blocks": {
+      "aje_book": {
+        "path": "blocks/aje_book.json.gz",
+        "record_count": 6,
+        "sha256": "900b831edec1ed3e447ad0c03f63a778bb3722824ef06910d8c4fb50577ff2fc"
+      },
+      "ap_activity": {
+        "path": "blocks/ap_activity.json.gz",
+        "record_count": 125,
+        "sha256": "a62446a11651641d8c0f734ff53e113dccd8a7150686ad88022b46264a7a5b3b"
+      }
+    },
+    "financial_priors": {
+      "path": "financial-priors.json.gz",
+      "record_count": 6,
+      "sha256": "43c72903666960f80630660d802105de564aaff1af618b58963ed5a9c3d8f776"
+    }
+  },
+  "privacy": {
+    "adjacency": "add or remove one complete donor binder",
+    "delta": 1e-05,
+    "epsilon_cumulative": 3.647022199528197,
+    "rho_cumulative": 0.25050779142824114,
+    "statement": "Runtime projection of already-noised inputs; generation adds no privacy loss."
+  },
+  "release_label": "dp-priors",
+  "schema": "dp_priors_store"
+}

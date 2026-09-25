@@ -1,0 +1,77 @@
+{
+  "schema": "dp_priors_scalar_queries",
+  "targets": {
+    "count.gl_annual_line_volume_class": {
+      "duplicate_aggregation": "median",
+      "statistic": "annual general-ledger line count",
+      "transform": {
+        "kind": "log1p_nonnegative",
+        "raw_bounds": [
+          0.0,
+          10000000
+        ]
+      },
+      "unit": "lines"
+    },
+    "hist.day_of_month_posting": {
+      "duplicate_aggregation": "median",
+      "statistic": "median posting day of month",
+      "transform": {
+        "kind": "linear",
+        "raw_bounds": [
+          1,
+          31
+        ]
+      },
+      "unit": "calendar day"
+    },
+    "hist.lines_per_entry": {
+      "duplicate_aggregation": "median",
+      "statistic": "median line count per journal entry",
+      "transform": {
+        "kind": "log1p_nonnegative",
+        "raw_bounds": [
+          0.0,
+          2000
+        ]
+      },
+      "unit": "lines per entry"
+    },
+    "ratio.manual_entry_share": {
+      "duplicate_aggregation": "median",
+      "statistic": "manual-entry share of journal entries",
+      "transform": {
+        "kind": "linear",
+        "raw_bounds": [
+          0,
+          1
+        ]
+      },
+      "unit": "fraction"
+    },
+    "ratio.out_of_period_line_share": {
+      "duplicate_aggregation": "median",
+      "statistic": "share of ledger lines dated outside the fiscal year",
+      "transform": {
+        "kind": "linear",
+        "raw_bounds": [
+          0,
+          1
+        ]
+      },
+      "unit": "fraction"
+    },
+    "selection.formula_presence": {
+      "duplicate_aggregation": "median",
+      "statistic": "share of workbooks containing live formulas",
+      "transform": {
+        "kind": "linear",
+        "raw_bounds": [
+          0,
+          1
+        ]
+      },
+      "unit": "fraction"
+    }
+  }
+}

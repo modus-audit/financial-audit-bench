@@ -1,0 +1,418 @@
+{
+  "resource_id": "registry.pbc.requests.v1",
+  "values": {
+    "request_document_kinds": {
+      "PAY-01": "payroll_register",
+      "PAY-03": "payroll_hr_support",
+      "PAY-04": "payroll_settlement_support",
+      "PAY-05": "payroll_subsequent_support"
+    },
+    "projection_fields": [
+      ["AR-03","Customer","customer","customer_name","join_invoice_line_customer"],
+      ["AR-03","Invoice","customer_invoice","invoice_number","render_customer_invoice_reference"],
+      ["AR-03","Invoice date","customer_invoice","invoice_date","join_invoice_line_date"],
+      ["AR-03","Customer PO","customer_invoice_line","customer_purchase_order_reference","goods_line_column"],
+      ["AR-03","Sales order","customer_invoice_line","sales_order_reference","goods_line_column"],
+      ["AR-03","Approved quote","customer_invoice_line","quote_reference","goods_line_column"],
+      ["AR-03","Goods/services","customer_invoice_line","goods_services"],
+      ["AR-03","Quantity","customer_invoice_line","quantity","register_quantity_column"],
+      ["AR-03","Price","customer_invoice_line","unit_price","register_price_column"],
+      ["AR-03","Terms","customer","payment_terms","join_invoice_line_terms"],
+      ["AR-03","Taxes","customer_invoice_line","tax_amount","goods_line_column"],
+      ["AR-03","Tax treatment","customer_invoice_line","sales_tax_status","goods_line_column"],
+      ["AR-03","Tax rate","customer_invoice_line","sales_tax_rate","goods_line_column"],
+      ["AR-03","Exemption certificate","customer_invoice_line","tax_exemption_certificate","goods_line_column"],
+      ["AR-03","Discounts","customer_invoice_line","discount_amount","discount_or_adjustment_column"],
+      ["AR-03","Freight","customer_invoice_line","freight_amount","goods_line_column"],
+      ["AR-03","Total","customer_invoice_line","net_amount"],
+      ["AR-04","Ship/delivery/acceptance date","fulfillment_event","fulfillment_date"],
+      ["AR-04","Destination","fulfillment_event","destination"],
+      ["AR-04","Terms","fulfillment_event","delivery_terms"],
+      ["AR-04","Customer acknowledgment","fulfillment_event","customer_acknowledgment"],
+      ["AR-04","Quantity","fulfillment_event","quantity_fulfilled"],
+      ["AR-04","Invoice link","fulfillment_event","customer_invoice_id"],
+      ["AR-04","Support reference","fulfillment_event","support_reference"],
+      ["AR-05","Receipt date","customer_cash_receipt","receipt_date","subsequent_receipt_column"],
+      ["AR-05","Amount","customer_cash_receipt","amount","subsequent_receipt_column"],
+      ["AR-05","Invoice applied","ar_receipt_application","customer_invoice_id","subsequent_receipt_invoice"],
+      ["AR-05","Discounts","customer_cash_receipt","discount_amount","subsequent_receipt_zero_column"],
+      ["AR-05","Deductions","customer_cash_receipt","deduction_amount","subsequent_receipt_zero_column"],
+      ["AR-05","Unapplied amount","customer_cash_receipt","unapplied_amount","subsequent_receipt_zero_column"],
+      ["AR-05","Bank reference","customer_cash_receipt","bank_reference","subsequent_receipt_column"],
+      ["AR-06","Customer","customer_credit_adjustment","customer_id","credit_memo_customer_name"],
+      ["AR-06","Customer account","customer_credit_adjustment","customer_id"],
+      ["AR-06","Date","customer_credit_adjustment","posting_date"],
+      ["AR-06","Amount","customer_credit_adjustment","amount"],
+      ["AR-06","Reason","customer_credit_adjustment","reason"],
+      ["AR-06","Related invoice","customer_credit_adjustment","related_invoice_id"],
+      ["AR-06","Approval","customer_credit_adjustment","approval_status"],
+      ["AR-06","Accounting period","customer_credit_adjustment","accounting_period"],
+      ["AR-06","Settlement status","customer_credit_adjustment","settlement_status"],
+      ["AR-06","Post-year-end","customer_credit_adjustment","posting_date","credit_memo_post_year_end"],
+      ["AR-16","Amount","ar_cutoff_item","amount"],
+      ["AR-16","Customer","ar_cutoff_item","customer_id"],
+      ["AR-16","Invoice date","ar_cutoff_item","invoice_date"],
+      ["AP-14","Invoice","vendor_invoice","invoice_reference","filter_ap_cutoff_population"],
+      ["AP-14","Receipt/service date","vendor_invoice","service_period_end","join_cutoff_receipt_date"],
+      ["AP-14","Invoice date","vendor_invoice","document_date","filter_cutoff_column"],
+      ["AP-14","Posting date","vendor_invoice","posting_date","filter_cutoff_column"],
+      ["AP-14","Amount","vendor_invoice","amount","filter_cutoff_column"],
+      ["AP-14","Vendor","vendor_invoice","vendor_id","join_cutoff_vendor"],
+      ["AP-14","Report purpose","company_context","company_id","purchase_detail_report_purpose"],
+      ["FA-01","Unique asset ID","fixed_asset_depreciation","fixed_asset_id","fixed_asset_register_detail"],
+      ["FA-01","Description","fixed_asset","description","fixed_asset_register_detail"],
+      ["FA-01","Asset class","fixed_asset","asset_class","fixed_asset_register_detail"],
+      ["FA-01","GL account","fixed_asset","cost_subaccount","fixed_asset_register_detail"],
+      ["FA-01","Serial number","fixed_asset","serial_number","fixed_asset_register_detail"],
+      ["FA-01","Location","fixed_asset","location","fixed_asset_register_detail"],
+      ["FA-01","Dates","fixed_asset","placed_in_service_date","fixed_asset_register_detail"],
+      ["FA-01","Cost","fixed_asset_depreciation","cost_basis","fixed_asset_register_detail"],
+      ["FA-01","Life","fixed_asset","useful_life_years","fixed_asset_register_detail"],
+      ["FA-01","Life support","fixed_asset","useful_life_support_reference","fixed_asset_register_detail"],
+      ["FA-01","Method","fixed_asset","depreciation_method","fixed_asset_register_detail"],
+      ["FA-01","Current-year depreciation","fixed_asset_depreciation","current_depreciation","fixed_asset_register_detail"],
+      ["FA-01","Net book value","fixed_asset_depreciation","ending_net_book_value","fixed_asset_register_detail"],
+      ["FA-02","By asset class and GL account","fixed_asset_gl_reconciliation","cost_gl_account_id"],
+      ["FA-02","Class subaccount","fixed_asset_rollforward","cost_subaccount_id"],
+      ["FA-02","Beginning cost","fixed_asset_rollforward","beginning_cost"],
+      ["FA-02","Additions","fixed_asset_rollforward","acquisitions"],
+      ["FA-02","Disposals","fixed_asset_rollforward","disposals"],
+      ["FA-02","Gross cost","fixed_asset_gl_reconciliation","gl_cost"],
+      ["FA-02","Beginning accumulated depreciation","fixed_asset_rollforward","beginning_accumulated_depreciation"],
+      ["FA-02","Accumulated depreciation","fixed_asset_gl_reconciliation","gl_accumulated_depreciation"],
+      ["FA-02","Expense","fixed_asset_rollforward","depreciation_additions"],
+      ["FA-02","Net book value","fixed_asset_rollforward","ending_net_book_value"],
+      ["FA-02","Differences","fixed_asset_gl_reconciliation","difference","render_fixed_asset_differences"],
+      ["FA-07","Cost basis","fixed_asset_rollforward","ending_cost"],
+      ["FA-07","Life","fixed_asset_rollforward","useful_life_years"],
+      ["FA-07","Method","fixed_asset_rollforward","depreciation_method"],
+      ["FA-07","Start date","fixed_asset_rollforward","earliest_placed_in_service_date"],
+      ["FA-07","Months/days","fixed_asset_rollforward","depreciable_period_basis"],
+      ["FA-07","Accumulated depreciation","fixed_asset_rollforward","ending_accumulated_depreciation"],
+      ["FA-07","Current expense","fixed_asset_rollforward","depreciation_additions"],
+      ["FA-16","Threshold amount","capitalization_policy","threshold_amount"],
+      ["FA-16","Method and life for each class","capitalization_policy","useful_life_years","render_method_and_life"],
+      ["FA-16","Convention applied (half-year, mid-month, actual date)","capitalization_policy","depreciation_convention"],
+      ["INV-01","Source record count","inventory_lot_balance","inventory_lot_balance_id","measure_inventory_lot_record_count"],
+      ["INV-01","Unique lot key count","inventory_lot_balance","inventory_lot_balance_id","measure_inventory_lot_unique_keys"],
+      ["INV-01","Categories present","inventory_lot_balance","inventory_item_id","measure_inventory_lot_categories"],
+      ["INV-01","Listing quantity control total","inventory_lot_balance","quantity_on_hand","measure_inventory_lot_quantity"],
+      ["INV-01","Listing cost control total","inventory_lot_balance","extended_cost","measure_inventory_lot_cost"],
+      ["INV-01","SKU","inventory_lot_balance","inventory_item_id","join_lot_item_sku"],
+      ["INV-01","Lot / layer key","inventory_lot_balance","lot_number"],
+      ["INV-01","Category","inventory_lot_balance","inventory_item_id","join_lot_item_category"],
+      ["INV-01","Location","inventory_lot_balance","inventory_location_id","join_lot_location_name"],
+      ["INV-01","Quantity","inventory_lot_balance","quantity_on_hand"],
+      ["INV-01","UOM","inventory_lot_balance","inventory_item_id","join_lot_item_uom"],
+      ["INV-01","Unit cost","inventory_lot_balance","unit_cost"],
+      ["INV-01","Total","inventory_lot_balance","extended_cost"],
+      ["INV-01","Cost method","inventory_lot_balance","inventory_item_id","join_lot_item_costing_method"],
+      ["INV-01","Owner","inventory_lot_balance","owner_entity_id"],
+      ["INV-01","Condition","inventory_lot_balance","condition"],
+      ["INV-01","Date","inventory_lot_balance","as_of_date"],
+      ["INV-02","By category and GL account","inventory_gl_reconciliation","inventory_gl_account_id"],
+      ["INV-02","SKU","inventory_rollforward","inventory_item_id"],
+      ["INV-02","Subledger total","inventory_gl_reconciliation","subledger_gross_cost"],
+      ["INV-02","GL balance","inventory_gl_reconciliation","gl_gross_balance"],
+      ["INV-02","Opening inventory","inventory_rollforward","opening_cost"],
+      ["INV-02","Purchases","inventory_rollforward","purchase_cost"],
+      ["INV-02","Production","inventory_rollforward","production_cost"],
+      ["INV-02","Usage / COGS","inventory_rollforward","sales_cost"],
+      ["INV-02","Count adjustment","inventory_rollforward","count_adjustment_cost"],
+      ["INV-02","Gross inventory","inventory_rollforward","ending_gross_cost"],
+      ["INV-02","Reserve","inventory_rollforward","reserve_amount"],
+      ["INV-02","Net inventory","inventory_rollforward","ending_net_cost"],
+      ["INV-02","Differences","inventory_gl_reconciliation","difference"],
+      ["INV-02","Review","inventory_gl_reconciliation","review_status"],
+      ["INV-03","Locations","inventory_count","inventory_location_id","join_count_location"],
+      ["INV-03","Dates","inventory_count","count_date"],
+      ["INV-03","Responsibilities","inventory_count","count_team","render_count_responsibilities"],
+      ["INV-03","Movement controls","inventory_count","inventory_freeze_timestamp","render_count_movement_controls"],
+      ["INV-03","Count methods","inventory_count","count_method"],
+      ["INV-03","Corrections","inventory_count_line","variance_quantity"],
+      ["INV-03","Final quantities","inventory_count_line","recount_quantity"],
+      ["INV-06","SKU","inventory_movement","inventory_item_id","join_purchase_item_sku"],
+      ["INV-06","Vendor","inventory_movement","vendor_reference","filter_purchase_receipts"],
+      ["INV-06","Quantity","inventory_movement","quantity","filter_purchase_receipts"],
+      ["INV-06","Unit price","inventory_movement","unit_cost","filter_purchase_receipts"],
+      ["INV-06","Freight/duty","inventory_movement","freight_duty_amount","filter_purchase_receipts"],
+      ["INV-06","Discounts","inventory_movement","discount_amount","filter_purchase_receipts"],
+      ["INV-06","Receipt date","inventory_movement","receipt_date","filter_purchase_receipts"],
+      ["INV-06","Total cost","inventory_movement","extended_cost","filter_purchase_receipts"],
+      ["INV-07","SKU/job","inventory_movement","inventory_item_id","join_production_buildup_sku_job"],
+      ["INV-07","Category","inventory_movement","inventory_item_id","join_production_buildup_category"],
+      ["INV-07","Components","inventory_movement","material_cost","filter_production_buildup"],
+      ["INV-07","Quantities","inventory_movement","quantity","filter_production_buildup"],
+      ["INV-07","Labor","inventory_movement","direct_labor_cost","filter_production_buildup"],
+      ["INV-07","Overhead","inventory_movement","production_overhead_cost","filter_production_buildup"],
+      ["INV-07","Stage of completion","inventory_movement","inventory_item_id","render_production_buildup_stage"],
+      ["INV-07","Total cost","inventory_movement","extended_cost","filter_production_buildup"],
+      ["INV-07","Variance","inventory_movement","extended_cost","derive_production_buildup_variance"],
+      ["INV-07","Support reference","inventory_movement","source_document","filter_production_buildup"],
+      ["REV-01","Staffing invoice-line ID","customer_invoice_line","customer_invoice_line_id"],
+      ["REV-01","Staffing invoice number","customer_invoice","invoice_number"],
+      ["REV-01","Staffing customer","customer","customer_name"],
+      ["REV-01","Staffing service and posting dates","customer_invoice","posting_date"],
+      ["REV-01","Staffing service description","customer_invoice_line","goods_services"],
+      ["REV-01","Approved hours and UOM","customer_invoice_line","quantity"],
+      ["REV-01","Authorized bill rate","staffing_time_entry","bill_rate"],
+      ["REV-01","Staffing gross and net amount","customer_invoice_line","net_amount"],
+      ["REV-01","Staffing revenue and AR accounts","customer_invoice","revenue_gl_account_id"],
+      ["REV-01","Executed agreement","customer_invoice","customer_contract_id"],
+      ["REV-01","Approved-time references","staffing_time_entry","approval_reference"],
+      ["REV-01","Staffing currency","customer_invoice","currency_code"],
+      ["REV-02","Staffing revenue account","customer_invoice","revenue_gl_account_id"],
+      ["REV-02","Staffing invoice-register sales","customer_invoice","original_amount"],
+      ["REV-02","Staffing credit memos","customer_credit_adjustment","amount"],
+      ["REV-02","Staffing revenue journals","journal_entry","journal_entry_id"],
+      ["REV-02","Staffing final revenue TB balance","final_adjusted_trial_balance_account","final_adjusted_closing_balance","select_staffing_revenue_tb_balance"],
+      ["REV-02","Staffing revenue reconciliation status","customer_invoice","approval_status"],
+      ["REV-03","Staffing revenue stream","customer_contract","presentation"],
+      ["REV-03","Staffing stream account","customer_invoice","revenue_gl_account_id"],
+      ["REV-03","Staffing customer type","customer","customer_type"],
+      ["REV-03","Staffing agreement terms","customer_contract","payment_terms"],
+      ["REV-03","Staffing recognition point","customer_contract","transfer_of_control_point"],
+      ["REV-03","Staffing required evidence","customer_contract","required_evidence"],
+      ["REV-03","Staffing presentation","customer_contract","presentation"],
+      ["REV-04","Staffing customer","customer","customer_name"],
+      ["REV-04","Staffing services","customer_contract","goods_services"],
+      ["REV-04","Authorized assignment quantity","customer_contract","contract_quantity"],
+      ["REV-04","Authorized bill and pay rates","staffing_time_entry","rate_authorization_reference"],
+      ["REV-04","Staffing delivery terms","customer_contract","delivery_terms"],
+      ["REV-04","Staffing acceptance terms","customer_contract","acceptance_terms"],
+      ["REV-04","Staffing payment terms","customer_contract","payment_terms"],
+      ["REV-04","Staffing cancellation terms","customer_contract","cancellation_terms"],
+      ["REV-04","Staffing return terms","customer_contract","return_terms"],
+      ["REV-05","Approved staffing hours","staffing_time_entry","billable_hours"],
+      ["REV-05","Staffing UOM","customer_invoice_line","uom"],
+      ["REV-05","Authorized staffing bill rate","staffing_time_entry","bill_rate"],
+      ["REV-05","Staffing discount","customer_invoice_line","discount_amount"],
+      ["REV-05","Staffing freight","customer_invoice_line","freight_amount"],
+      ["REV-05","Staffing tax","customer_invoice_line","tax_amount"],
+      ["REV-05","Staffing rebate","customer_invoice_line","rebate_amount"],
+      ["REV-05","Staffing gross and net","customer_invoice_line","net_amount"],
+      ["REV-05","Staffing pricing approval","customer_invoice_line","approval_status"],
+      ["PAY-02","Employee ID","employee","employee_id"],
+      ["PAY-02","Employee","employee","full_name"],
+      ["PAY-02","Status","employee","employment_status"],
+      ["PAY-02","Hire date","employee","hire_date"],
+      ["PAY-02","Termination date","employee","termination_date"],
+      ["PAY-02","Role","employee","role"],
+      ["PAY-02","Department","employee","department"],
+      ["PAY-02","Pay basis","employee","pay_basis"],
+      ["PAY-02","Authorized salary or rate","employee","authorized_rate"],
+      ["PAY-02","Compensation effective date","employee","compensation_effective_date"],
+      ["PAY-02","Pay periods","employee","pay_periods_per_year","derive_pay_periods_worked"],
+      ["PAY-02","Authorization reference","employee","authorization_reference"]
+    ],
+    "pbc_requests": {
+      "CASH-01": {
+        "family": "cash",
+        "request": "Complete bank-account listing"
+      },
+      "CASH-02": {
+        "family": "cash",
+        "request": "Year-end bank balance support"
+      },
+      "CASH-03": {
+        "family": "cash",
+        "request": "Bank reconciliations"
+      },
+      "CASH-04": {
+        "family": "cash",
+        "request": "Outstanding checks"
+      },
+      "CASH-05": {
+        "family": "cash",
+        "request": "Deposits in transit"
+      },
+      "CASH-07": {
+        "family": "cash",
+        "request": "Subsequent clearing of reconciling items"
+      },
+      "AR-01": {
+        "family": "accounts_receivable",
+        "request": "Detailed AR aging"
+      },
+      "AR-03": {
+        "family": "accounts_receivable",
+        "request": "Sales invoices and customer support"
+      },
+      "AR-04": {
+        "family": "accounts_receivable",
+        "request": "Shipment, delivery, or acceptance evidence"
+      },
+      "AR-05": {
+        "family": "accounts_receivable",
+        "request": "Subsequent cash receipts"
+      },
+      "AR-06": {
+        "family": "accounts_receivable",
+        "request": "Credit memos, returns, deductions, and chargebacks"
+      },
+      "AR-07": {
+        "family": "accounts_receivable",
+        "request": "Allowance for credit losses"
+      },
+      "AR-16": {
+        "family": "accounts_receivable",
+        "request": "Receivable cutoff population"
+      },
+      "AR-17": {
+        "family": "accounts_receivable",
+        "request": "CECL methodology memo and loss-rate support (ASC 326)"
+      },
+      "AP-01": {
+        "family": "ap_and_accruals",
+        "request": "Detailed AP aging or unpaid invoice listing"
+      },
+      "AP-03": {
+        "family": "ap_and_accruals",
+        "request": "Vendor invoices, purchase orders, and receiving support"
+      },
+      "AP-04": {
+        "family": "ap_and_accruals",
+        "request": "Subsequent disbursement testing"
+      },
+      "AP-06": {
+        "family": "ap_and_accruals",
+        "request": "Received-not-invoiced and unmatched receipts"
+      },
+      "AP-07": {
+        "family": "ap_and_accruals",
+        "request": "Accrued expenses rollforward"
+      },
+      "AP-14": {
+        "family": "ap_and_accruals",
+        "request": "Purchase cutoff population"
+      },
+      "AP-17": {
+        "family": "ap_and_accruals",
+        "request": "DPO inputs for the search period"
+      },
+      "AP-18": {
+        "family": "ap_and_accruals",
+        "request": "Disbursement-listing completeness support"
+      },
+      "FA-01": {
+        "family": "fixed_assets",
+        "request": "Detailed fixed-asset register"
+      },
+      "FA-02": {
+        "family": "fixed_assets",
+        "request": "Fixed-asset rollforward and GL reconciliation"
+      },
+      "FA-07": {
+        "family": "fixed_assets",
+        "request": "Depreciation recalculation"
+      },
+      "FA-16": {
+        "family": "fixed_assets",
+        "request": "Capitalization and depreciation policy"
+      },
+      "INV-01": {
+        "family": "inventory",
+        "request": "Detailed inventory listing or perpetual records"
+      },
+      "INV-02": {
+        "family": "inventory",
+        "request": "Inventory-to-GL reconciliation and rollforward"
+      },
+      "INV-03": {
+        "family": "inventory",
+        "request": "Physical count instructions and results"
+      },
+      "INV-06": {
+        "family": "inventory",
+        "request": "Raw-material and purchased-component cost support"
+      },
+      "INV-07": {
+        "family": "inventory",
+        "request": "WIP and finished-goods cost buildup"
+      },
+      "INV-10": {
+        "family": "inventory",
+        "request": "Shipping and receiving cutoff"
+      },
+      "REV-01": {
+        "family": "revenue",
+        "request": "Complete annual revenue detail"
+      },
+      "REV-02": {
+        "family": "revenue",
+        "request": "Revenue-to-GL reconciliation"
+      },
+      "REV-03": {
+        "family": "revenue",
+        "request": "Revenue-stream mapping and accounting policy"
+      },
+      "REV-04": {
+        "family": "revenue",
+        "request": "Customer contracts, POs, and sales orders"
+      },
+      "REV-05": {
+        "family": "revenue",
+        "request": "Pricing and quantity support"
+      },
+      "REV-07": {
+        "family": "revenue",
+        "request": "Shipment, delivery, service, or acceptance evidence"
+      },
+      "JE-01": {
+        "family": "journal_entries",
+        "request": "Complete journal-entry and GL export"
+      },
+      "JE-10": {
+        "family": "journal_entries",
+        "request": "Selected JE source support"
+      },
+      "PAY-01": {
+        "family": "payroll",
+        "request": "Payroll register / summary by pay period"
+      },
+      "PAY-02": {
+        "family": "payroll",
+        "request": "Employee roster with annual compensation"
+      },
+      "PAY-03": {
+        "family": "payroll",
+        "request": "HR authorization and payroll master-file change controls"
+      },
+      "PAY-04": {
+        "family": "payroll",
+        "request": "Payroll bank settlement and tax/benefit remittance evidence"
+      },
+      "PAY-05": {
+        "family": "payroll",
+        "request": "Subsequent payroll, accrual reversal, and liability settlement"
+      }
+    },
+    "foundational_requests": {
+      "FOUNDATIONAL-02": {
+        "request": "Prior-year final trial balance (audited)"
+      },
+      "FOUNDATIONAL-03": {
+        "request": "Current-year trial balance (final, post-close) with account mapping"
+      },
+      "FOUNDATIONAL-05": {
+        "request": "Chart of accounts with FSLI mapping"
+      }
+    },
+    "point_in_time_requests": [
+      "CASH-01",
+      "CASH-02",
+      "CASH-03",
+      "CASH-04",
+      "CASH-05",
+      "AR-01",
+      "AR-07",
+      "AR-17",
+      "AP-01",
+      "AP-06",
+      "FA-01",
+      "INV-01",
+      "INV-03",
+      "PAY-02"
+    ]
+  }
+}
